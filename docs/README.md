@@ -1,3 +1,0 @@
--show wireframes
--describe features
--outline a development timeline for the application

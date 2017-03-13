@@ -33,3 +33,13 @@
   - ReservationFormContainer
   - ListeningItemDetailsContainer
   - ListingItemReviewsContainer
+
+
+# Routes
+| Path       	| Component           	|
+|------------	|---------------------	|
+| "/sign-up" 	| "AuthFormContainer" 	|
+| "/sign-in"  |  "AuthFormContainer" 	|
+|  "/home"   	|  "HomeContainer"            	|
+|  "/home/search-results"   	| "SearchResultsContainer"             	|
+|  "/destinations/:id"   	| "ListingItemContainer"             	|
