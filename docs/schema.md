@@ -9,18 +9,19 @@ email           | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
 
-## destination
+## cities
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-city       | string    | not null
-description        | text      | not null
+city        | string    | not null
+description | text      | not null
 
-## destinationDetails
+## rooms
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-destination_id   | integer   | not null, foreign key (references destination), indexed
+city_id   | integer   | not null, foreign key (references destination), indexed
+location (longitude/latitude)   | array   | not null
 name       | string    | not null
 description       | text    | not null
 details       | string    | not null
@@ -37,4 +38,15 @@ ammenities | string    |
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-reviews_id       | integer    | not null
+user_id       | integer    | not null,  foreign key, indexed
+room_id       | integer    | not null,  foreign key, indexed
+
+## bookings
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+user_id       | integer    | not null,  foreign key, indexed
+room_id       | integer    | not null,  foreign key, indexed
+start_time       | date    | not null
+end_time         | date    | not null
+party_size      | integer    | not null

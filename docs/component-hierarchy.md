@@ -40,6 +40,11 @@
 |------------	|---------------------	|
 | "/sign-up" 	| "AuthFormContainer" 	|
 | "/sign-in"  |  "AuthFormContainer" 	|
-|  "/home"   	|  "HomeContainer"            	|
-|  "/home/search-results"   	| "SearchResultsContainer"             	|
-|  "/destinations/:id"   	| "ListingItemContainer"             	|
+|  "/"   	|  "HomeContainer"            	|
+|  "/search-results"   	| "SearchIndexContainer" (have RoomDetail)   * Possibly even use RoomIndexContainer          	|
+|  "/cities/:id"   	| "ListingItemContainer"             	|
+|  "/rooms"   	| "RoomIndexContainer" (have RoomDetail)             	|
+|  "/rooms/:roomId"   	| "RoomDetailContainer"             	|
+
+
+        
