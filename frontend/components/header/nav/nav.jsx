@@ -10,7 +10,7 @@ const NavPanelButtons = () => (
 
 const personalGreetingNav = (currentUser, logout) => (
   <hgroup className="nav-group">
-    <h2 className="nav-name">Welcome, {currentUser.username}!</h2>
+    <h2 className="nav-name">Welcome, {currentUser.name}!</h2>
     <button className="nav-button" onClick={logout}>Log Out</button>
   </hgroup>
 );
