@@ -16,7 +16,7 @@ class SessionForm extends React.Component {
   componentDidUpdate() {
 		this.redirectIfLoggedIn();
   }
-  
+
   redirectIfLoggedIn() {
     if(this.props.loggedIn) {
       this.props.router.push("/");
@@ -72,10 +72,10 @@ class SessionForm extends React.Component {
 								className="login-input" />
 						</label>
 						<br/>
-            <label> Username:
+            <label> Email:
 							<input type="text"
-								value={this.state.username}
-								onChange={this.update("username")}
+								value={this.state.email}
+								onChange={this.update("email")}
 								className="login-input" />
 						</label>
 						<br/>
