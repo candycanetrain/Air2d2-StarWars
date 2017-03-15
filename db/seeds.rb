@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(name: "Han Solo", email: "hansolo@air2n2.com", password: "chewbacca");
-User.create(name: "Chewbacca", email: "hansolo@air2n2.com", password: "hansolo");
-User.create(name: "Luke Skywalker", email: "lukeskywalker@air2n2.com", password: "lukeskywalker");
-User.create(name: "Darth Vader", email: "darthvader@air2n2.com", password: "darthvader");
-User.create(name: "Yoda", email: "yoda@air2n2.com", password: "yoda");
-User.create(name: "Leia Organa", email: "leiaorgana@air2n2.com", password: "leiaorgana");
+User.create(name: "Han Solo", email: "hansolo@air2d2.com", password: "chewbacca");
+User.create(name: "Chewbacca", email: "hansolo@air2d2.com", password: "hansolo");
+User.create(name: "Luke Skywalker", email: "lukeskywalker@air2d2.com", password: "lukeskywalker");
+User.create(name: "Darth Vader", email: "darthvader@air2d2.com", password: "darthvader");
+User.create(name: "Yoda", email: "yoda@air2d2.com", password: "yoda");
+User.create(name: "Leia Organa", email: "leiaorgana@air2d2.com", password: "leiaorgana");
