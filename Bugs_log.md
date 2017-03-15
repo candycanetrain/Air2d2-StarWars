@@ -8,3 +8,5 @@
 - Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in.
 -- need to export
 
+- Error: You must pass a component to the function returned by connect. Instead received {}
+  -- 

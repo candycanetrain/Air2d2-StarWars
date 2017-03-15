@@ -5,8 +5,13 @@
 3. check component hierarchy
 3/14/17
 1. const _nullUser => What is the Object.freezze for?
+  -to render errors if you try to change things toplevel stuff
 3.15.17
 1. Style questions, use {link} from react-router or buttons w/ onClick feature. Decision: use links and style with CSS
+2. gitignore md files
+2. modals
+3. bootstraps
+4. sass
 
 ##Plans:
 

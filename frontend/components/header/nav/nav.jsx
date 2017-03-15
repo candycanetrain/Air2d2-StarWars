@@ -2,9 +2,11 @@ import React from 'react';
 import {Link} from 'react-router';
 
 const NavPanelButtons = () => (
-  <nav className="login-signup">
-    <Link to="/login" activeClassName="current">Sign Up</Link>
-    <Link to="/signup" activeClassName="current">Login</Link>
+  <nav className="navbar-login-signup">
+    <ul className="nav items">
+      <li><Link to="/signup" activeClassName="current">Sign Up</Link></li>
+      <li><Link to="/login" activeClassName="current">Login</Link></li>
+    </ul>
   </nav>
 );
 
