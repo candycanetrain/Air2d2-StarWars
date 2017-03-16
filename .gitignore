@@ -22,6 +22,6 @@ bundle.js.map
 .DS_Store
 npm-debug.log
 
-# Temporary files created by R markdown
-*.Questions.md
-*.Bugs_log.md
+
+Questions.md
+Bugs_log.md

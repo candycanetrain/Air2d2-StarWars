@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 
 const NavPanelButtons = () => (
   <nav className="navbar-login-signup">
-    <ul className="nav items">
+    <ul className="nav-items">
       <li><Link to="/signup" activeClassName="current">Sign Up</Link></li>
       <li><Link to="/login" activeClassName="current">Login</Link></li>
     </ul>

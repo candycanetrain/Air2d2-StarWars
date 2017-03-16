@@ -41,4 +41,6 @@ ownProps has params (from routes)
 
 
 #NOTES FOR FUTURE
-1. be careful when clearing errors that you don’t reset your current user to your nullUser (unless that’s what you intend to do).  That’s a classic FSP mistake - spare yourself!
+1. be careful when clearing errors that you don’t reset your current user to your nullUser (unless that’s what you intend to do).  That’s a classic FSP mistake - spare yourself!w
+3. //import modules before partials 
+order here
