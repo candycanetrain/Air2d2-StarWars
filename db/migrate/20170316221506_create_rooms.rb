@@ -3,9 +3,9 @@ class CreateRooms < ActiveRecord::Migration[5.0]
     create_table :rooms do |t|
       t.string :name, null: false
       t.integer :city_id, null: false
-      t.array :location, null: false
+      t.column :price, :decimal, precision: 7, scale: 2, null: false
+      t.string :location, array: true, null: false
       t.text :description, null: false
-      t.decimal{'7,2'} :price, null: false
       t.integer :bedrooms, null: false
       t.integer :beds, null: false
       t.integer :bathrooms, null: false
@@ -16,6 +16,6 @@ class CreateRooms < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    add_index :city_id 
+    add_index :rooms, :city_id 
   end
 end
