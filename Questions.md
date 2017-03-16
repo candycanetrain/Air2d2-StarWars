@@ -12,6 +12,8 @@
 2. modals
 3. bootstraps
 4. sass
+3/16/17
+1. I switched to modals. What to do with the sign up/login routes? Should I delete them? Go to /#/signup, nothing shows. 
 
 #Things to do
 1. remove name from session form if logging in. only for sign up.

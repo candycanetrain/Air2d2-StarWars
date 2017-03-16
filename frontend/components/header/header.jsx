@@ -1,6 +1,7 @@
 import React from 'react';
 import NavContainer from './nav/nav_container';
 
+
 const Header = ({children}) => (
   <div>
     <header className="header-bar">

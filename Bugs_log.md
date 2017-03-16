@@ -10,3 +10,5 @@
 
 - Error: You must pass a component to the function returned by connect. Instead received {}
   -- 
+
+  align content vs align items
