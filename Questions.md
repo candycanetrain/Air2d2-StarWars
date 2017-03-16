@@ -46,3 +46,53 @@ ownProps has params (from routes)
 1. be careful when clearing errors that you don’t reset your current user to your nullUser (unless that’s what you intend to do).  That’s a classic FSP mistake - spare yourself!w
 3. //import modules before partials 
 order here
+
+
+
+
+
+
+
+##NOTES FROM LOUIS
+
+Schema
+    * Possibly change destinations to cities and destinationDetail to rooms
+    * Reviews
+        * Should have user_id
+        * Should have room_id
+    * Add booking table
+        * Should have user_id
+        * Should have a room_id
+        * Should have a start_time (date)
+        * Should have an end_time (date)
+        * Should have party_size
+Endpoints
+    * Add 'api/cities/search'
+    * Add POST 'api/cities/:id/book' or POST 'api/bookings'
+    * Add DELETE (and PATCH) 'api/bookings/:id'
+Component Hierarchy
+    * "/home" to "/"
+    * "/rooms" RoomIndexContainer (have RoomDetail)
+    * "/rooms/:roomId" RoomDetailContainer
+    * "/search-results" SearchIndexContainer (have RoomDetail)
+        * Possibly even use RoomIndexContainer
+State
+{
+    session: {...},
+    forms: {...},
+    rooms: {
+        1: {
+            ...
+            (minimal)
+            ...
+        },
+        ...
+        999999999
+    },
+    currentRoom: {
+        id: 1,
+        ...
+        (maximal)
+        ...
+    }
+}
