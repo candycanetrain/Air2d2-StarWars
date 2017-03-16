@@ -2,7 +2,7 @@ class CreateRooms < ActiveRecord::Migration[5.0]
   def change
     create_table :rooms do |t|
       t.string :name, null: false
-      t.integer :city_id, null: false
+      t.string :city, null: false
       t.column :price, :decimal, precision: 7, scale: 2, null: false
       t.string :location, array: true, null: false
       t.text :description, null: false
@@ -16,6 +16,7 @@ class CreateRooms < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    add_index :rooms, :city_id 
+    add_index :rooms, :name
+    add_index :rooms, :city
   end
 end

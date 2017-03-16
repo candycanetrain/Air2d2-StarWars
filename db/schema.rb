@@ -10,14 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316221506) do
+ActiveRecord::Schema.define(version: 20170316223628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "room_id",    null: false
+    t.date     "start_time", null: false
+    t.date     "end_time",   null: false
+    t.integer  "party_size", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_bookings_on_room_id", using: :btree
+    t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree
+  end
+
   create_table "rooms", force: :cascade do |t|
     t.string   "name",                                null: false
-    t.integer  "city_id",                             null: false
+    t.string   "city",                                null: false
     t.decimal  "price",       precision: 7, scale: 2, null: false
     t.string   "location",                            null: false, array: true
     t.text     "description",                         null: false
@@ -29,7 +41,8 @@ ActiveRecord::Schema.define(version: 20170316221506) do
     t.text     "amenities"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["city_id"], name: "index_rooms_on_city_id", using: :btree
+    t.index ["city"], name: "index_rooms_on_city", using: :btree
+    t.index ["name"], name: "index_rooms_on_name", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
