@@ -21,3 +21,6 @@ bundle.js
 bundle.js.map
 .DS_Store
 npm-debug.log
+
+Questions.md
+Bugs_log.md

@@ -13,6 +13,9 @@
 3. bootstraps
 4. sass
 
+#Things to do
+1. remove name from session form if logging in. only for sign up.
+
 ##Plans:
 
 start writing components, hard code some info, "hi, username", work backwards, redux cycle
