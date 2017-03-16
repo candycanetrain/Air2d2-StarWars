@@ -2,12 +2,10 @@ import React from 'react';
 import {Link} from 'react-router';
 
 const NavPanelButtons = () => (
-  <nav className="navbar-login-signup">
-    <ul className="nav-items">
+  <ul className="navbar-login-signup">
       <li><Link to="/signup" activeClassName="current">Sign Up</Link></li>
       <li><Link to="/login" activeClassName="current">Login</Link></li>
-    </ul>
-  </nav>
+  </ul>
 );
 
 const personalGreetingNav = (currentUser, logout) => (

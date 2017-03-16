@@ -32,7 +32,7 @@ StarWarsBnb is a Star Wars-themed website inspired by AirBnB built using Ruby on
 Rather than building the entire project all at once, I will implement one feature at a time.
  ##### Phase 1: Backend setup and Front End User Authentication (2 days)
  **Objective:** Functioning rails project with front-end Authentication
- ##### Phase 2: Models for User and Destination, API, and components (2 days)
+ ##### Phase 2: Models for User and Room, API, and components (2 days)
  **Objective:** Users and Destinations can be created, read, edited, and destroyed through the API
  ##### Phase 3: DestinationDetails (2 days)
  **Objective:** DestinationDetails are displayed when user selects a destination.

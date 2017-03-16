@@ -1,11 +1,20 @@
 .navbar-login-signup {
+  display: flex;
   justify-content: space-between;
-  font-family: $sans-serif;
+  align-items: center;
+  font-family: $circular;
   font-size: 20px;
+  color: $gray;
+  background-color: transparent;
 }
 
-.nav-items {
+.navbar-login-signup > li {
+  align-items: center;
+}
+.navbar-login-signup > li > a {
   justify-content: space-between;
-  border: 15px solid $black;
-  
+  align-items: center;
+  padding: 10px 10px;    
+  position: relative;
+  font-size: 13px;
 }
