@@ -1,4 +1,4 @@
-class Api::RoomController < ApplicationController
+class Api::RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save

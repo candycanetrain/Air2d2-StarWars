@@ -1,0 +1,1 @@
+json.array! @rooms, :id, :name, :city
