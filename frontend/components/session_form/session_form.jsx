@@ -65,7 +65,7 @@ class SessionForm extends React.Component {
 
   guestLogin(e){
     e.preventDefault();
-    const demoGuest = {name: "Han Solo", username: "hansolo@air2d2.com", password: "chewbacca"};
+    const demoGuest = {name: "Han Solo", email: "hansolo@air2d2.com", password: "chewbacca"};
     this.props.login(demoGuest);
   }
 
