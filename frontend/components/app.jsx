@@ -9,9 +9,7 @@ const App = ({children}) => (
     <section className="SearchIndexContainer">
       SearchContainer Here
     </section>
-    <section className="RoomIndexContainer">
-      RoomIndexContainer
-    </section>
+
     {children}
   </div>
 );

@@ -4,11 +4,12 @@ import Modal from 'react-modal';
 import Root from './components/root';
 import configureStore from './store/store';
 import {login, logout} from './actions/session_actions';
-import * as RoomAPIUtil from './util/room_api_util';
+import {fetchRooms, fetchRoom} from './actions/room_actions';
+window.fetchRooms = fetchRooms;
+window.fetchRoom = fetchRoom;
 
 const windowFunctions = {login, logout};
 Object.assign(window, windowFunctions);
-window.fetchRooms = RoomAPIUtil.fetchRooms;
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
