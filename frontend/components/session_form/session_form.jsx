@@ -18,11 +18,7 @@ class SessionForm extends React.Component {
 		this.closeModal = this.closeModal.bind(this);
 
   }
-  componentWillReceiveProps(nextProps){
-    if (nextProps.formType !== this.props.formType) {
-      this.props.clearErrors([]);
-    }
-  }
+ 
   componentDidUpdate() {
 		this.redirectIfLoggedIn();
   }
@@ -41,9 +37,17 @@ class SessionForm extends React.Component {
 
   navLink(){
     if(this.state.modalType === "login") {
-			return <button onClick={this.openModal.bind(this, 'signup')}>sign up instead!</button>;
+			return <button className="toggle-button" onClick={this.openModal.bind(this, 'signup')}>sign up instead!</button>;
     } else {
-        return <button onClick={this.openModal.bind(this, 'login')}>Login instead!</button>;      
+        return <button className="toggle-button" onClick={this.openModal.bind(this, 'login')}>Login instead!</button>;      
+    }
+  }
+
+  toggleMessage(){
+    if(this.state.modalType === "login") {
+      return <div className="toggle-message">Don't have an account?</div>;
+    } else {
+      return <div className="toggle-message">Already have an Air2d2 account?</div>;      
     }
   }
 
@@ -57,6 +61,12 @@ class SessionForm extends React.Component {
         ))}
       </ul>
     );
+  }
+
+  guestLogin(e){
+    e.preventDefault();
+    const demoGuest = {name: "Han Solo", username: "hansolo@air2d2.com", password: "chewbacca"};
+    this.props.login(demoGuest);
   }
 
   handleSubmit(e) {
@@ -74,6 +84,8 @@ class SessionForm extends React.Component {
 			modalOpen: true,
 			modalType
 		});
+    this.props.clearErrors([]);
+    
 	}
 
 	closeModal() {
@@ -97,36 +109,49 @@ class SessionForm extends React.Component {
 					Welcome to Air2d2!
 					<br/>
 					<br/>
-
-					Please {this.state.modalType} or {this.navLink()}
-					<form onSubmit={this.handleSubmit} >
-						{this.renderErrors()}
-						<div className="login-form">
-							<br/>
-							<label> Name: 
-								<input type="text"
-									value={this.state.name}
-									onChange={this.update("name")}
-									className="login-input" />
-							</label>
-              <br />
-							<label> Email: 
-								<input type="text"
-									value={this.state.email}
-									onChange={this.update("email")}
-									className="login-input" />
-							</label>
-							<br/>
-              <label> Password: 
-								<input type="password"
-									value={this.state.password}
-									onChange={this.update("password")}
-									className="login-input" />
-							</label>
-							<br/>
-							<input type="submit" value="Submit" />
-						</div>
-					</form>
+          <div className="login-signup-modal">
+            
+            <form onSubmit={this.handleSubmit} >
+              {this.renderErrors()}
+              <div className="login-form">
+                <br/>
+                <div className="control-group">
+                  <input placeholder="Name" type="text"
+                    value={this.state.name}
+                    onChange={this.update("name")}
+                    className="login-input" />
+                </div>
+                <br />
+                <div className="control-group">
+                  <input placeholder="Email Address" type="text"
+                    value={this.state.email}
+                    onChange={this.update("email")}
+                    className="login-input" />
+                  <i className="fa fa-envelope-o" aria-hidden="true"></i>
+                    
+                </div>
+                <br/>
+                <div className="control-group">
+                  <input placeholder="Password" type="password"
+                    value={this.state.password}
+                    onChange={this.update("password")}
+                    className="login-input" />
+                  <i className="fa fa-lock" aria-hidden="true"></i>
+                </div>
+                
+                <br/>
+                <div className="submit-button">
+                  <input type="submit" value="Submit" />
+                </div>
+              </div>
+            </form>
+            <div className="toggle-signup-login">
+              <div className="toggle">{this.toggleMessage()}</div> 
+              <button className="guest-login" onClick={this.guestLogin.bind(this)}>Demo Guest</button>
+              <div className="toggle">{this.navLink()}</div>
+              
+            </div>
+          </div>
 				</Modal>
 			</div>
     );

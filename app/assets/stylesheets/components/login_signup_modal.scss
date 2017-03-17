@@ -1,0 +1,27 @@
+.login-signup-modal {
+  color: $salmon;
+  font-family: $gray;
+  background-color: $white;
+}
+
+.control-group {
+  border: 1px solid $light-gray;
+  font-size: 16px;
+  padding: 10px 35px 10px 10px;
+}
+
+.toggle-button {
+  border: 1px solid $salmon;
+  background-color: $white;
+  color: $salmon;
+  font-weight: normal;
+}
+
+.submit-button {
+  display: flex;
+  font-size: 16px;
+  background-color: $salmon;
+  color: $white;
+  padding: 20px 27px;
+  justify-content: center;
+}
