@@ -1,19 +1,27 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class RoomIndexItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    const roomId = this.props.room.id;
+    this.props.router.push(`rooms/${roomId}`);
+  }
 
   render() {
     const room = this.props.room
     return(
-      <div>
-        
+      <div className="room-index-item"
+        onClick={this.handleClick}>
         <h1>{room.name}</h1>
         <div>{room.city}</div>    
       </div>
-      
-    )
+    );
   }
-
 }
 
-export default RoomIndexItem;
+export default withRouter(RoomIndexItem);

@@ -1,2 +1,1 @@
-json.extract! room, :id, :name, :city, :price, :location, :description, :bedrooms, :beds, :bathrooms, :homeType, :accommodates, :amenities
-json.extract! room, :id, :name, :city, :price, :location, :description, :bedrooms, :beds, :bathrooms, :homeType, :accommodates, :amenities
+json.extract! room, :id, :name, :city, :price, :lat, :lng, :description, :bedrooms, :beds, :bathrooms, :homeType, :accommodates, :amenities

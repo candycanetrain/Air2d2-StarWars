@@ -2,7 +2,7 @@ class Api::RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      render "api/room/show#{params[:id]}"
+      render "api/rooms/#{params[:id]}"
     else
       render json: @room.errors.full_messages,status: 422
     end
@@ -17,9 +17,6 @@ class Api::RoomsController < ApplicationController
 
   def show
     @room = Room.find_by_id(params[:id])
-    if @room
-      render "api/room/show#{id}"
-    end
   end
 
   private
