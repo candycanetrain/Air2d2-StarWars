@@ -10,7 +10,7 @@ class CreateRooms < ActiveRecord::Migration[5.0]
       t.integer :beds, null: false
       t.integer :bathrooms, null: false
       t.string :homeType, null: false
-      t.integer :accomdates, null: false
+      t.integer :accommodates, null: false
       t.text :amenities
 
       t.timestamps

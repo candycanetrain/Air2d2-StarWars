@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316235844) do
+ActiveRecord::Schema.define(version: 20170318235457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,20 +28,20 @@ ActiveRecord::Schema.define(version: 20170316235844) do
   end
 
   create_table "rooms", force: :cascade do |t|
-    t.string   "name",                                null: false
-    t.string   "city",                                null: false
-    t.decimal  "price",       precision: 7, scale: 2, null: false
-    t.text     "description",                         null: false
-    t.integer  "bedrooms",                            null: false
-    t.integer  "beds",                                null: false
-    t.integer  "bathrooms",                           null: false
-    t.string   "homeType",                            null: false
-    t.integer  "accomdates",                          null: false
+    t.string   "name",                                 null: false
+    t.string   "city",                                 null: false
+    t.decimal  "price",        precision: 7, scale: 2, null: false
+    t.text     "description",                          null: false
+    t.integer  "bedrooms",                             null: false
+    t.integer  "beds",                                 null: false
+    t.integer  "bathrooms",                            null: false
+    t.string   "homeType",                             null: false
     t.text     "amenities"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.float    "lat",                                 null: false
-    t.float    "lng",                                 null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.float    "lat",                                  null: false
+    t.float    "lng",                                  null: false
+    t.integer  "accommodates",                         null: false
     t.index ["city"], name: "index_rooms_on_city", using: :btree
     t.index ["name"], name: "index_rooms_on_name", using: :btree
   end

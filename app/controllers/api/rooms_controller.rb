@@ -25,6 +25,6 @@ class Api::RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:id, :name, :city, :description, :location, :price, :bedrooms, :beds, :bathrooms, :homeType, :accomdates, :amenities)
+    params.require(:room).permit(:id, :name, :city, :description, :location, :price, :bedrooms, :beds, :bathrooms, :homeType, :accommodates, :amenities)
   end
 end

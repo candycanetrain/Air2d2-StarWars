@@ -30,7 +30,7 @@ bedrooms       | string    | not null
 beds       | string    | not null
 bathrooms       | string    | not null
 homeType      | string    | not null
-accomdates:        | string    | not null
+accommodates:        | string    | not null
 ammenities | string    |
 
 

@@ -12,7 +12,7 @@
 #  beds        :integer          not null
 #  bathrooms   :integer          not null
 #  homeType    :string           not null
-#  accomdates  :integer          not null
+#  accommodates  :integer          not null
 #  amenities   :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
@@ -31,7 +31,7 @@ one:
   beds: 1
   bathrooms: 1
   homeType: MyString
-  accomdates: 1
+  accommodates: 1
   amenities: MyText
 
 two:
@@ -45,5 +45,5 @@ two:
   beds: 1
   bathrooms: 1
   homeType: MyString
-  accomdates: 1
+  accommodates: 1
   amenities: MyText

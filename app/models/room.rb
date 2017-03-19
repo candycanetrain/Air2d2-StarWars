@@ -12,14 +12,14 @@
 #  beds        :integer          not null
 #  bathrooms   :integer          not null
 #  homeType    :string           not null
-#  accomdates  :integer          not null
+#  accommodates  :integer          not null
 #  amenities   :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 
 class Room < ApplicationRecord
-  validates :name, :city, :price, :lat, :lng, :description, :bedrooms, :beds, :bathrooms, :homeType, :accomdates, presence: true
+  validates :name, :city, :price, :lat, :lng, :description, :bedrooms, :beds, :bathrooms, :homeType, :accommodates, presence: true
 
 
   
