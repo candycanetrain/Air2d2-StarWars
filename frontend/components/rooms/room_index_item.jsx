@@ -18,7 +18,8 @@ class RoomIndexItem extends React.Component {
       <div className="room-index-item"
         onClick={this.handleClick}>
         <h1>{room.name}</h1>
-        <div>{room.city}</div>    
+        <div>{room.city}</div>
+        <img src={room.img_url} alt=""/>
       </div>
     );
   }

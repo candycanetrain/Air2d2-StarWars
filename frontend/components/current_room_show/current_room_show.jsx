@@ -14,7 +14,7 @@ class CurrentRoomShow extends React.Component {
     return(
       <div>
         <ul className="current-room">
-          <img src="" alt=""/>
+          <img src={img_url} alt=""/>
           <li>Name: {}</li>
           <li>City: {}</li>
           <li>Price: {}</li>

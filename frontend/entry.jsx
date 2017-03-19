@@ -5,12 +5,13 @@ import Root from './components/root';
 import configureStore from './store/store';
 import {login, logout} from './actions/session_actions';
 import * as RoomUtil from './util/room_api_util';
+import {selectRoom} from './reducers/selectors';
 
 import {fetchRooms, fetchRoom} from './actions/room_actions';
 window.fetchRooms = fetchRooms;
 window.fetchRoom = fetchRoom;
 
-const windowFunctions = {login, logout};
+const windowFunctions = {login, logout, selectRoom};
 Object.assign(window, windowFunctions);
 
 document.addEventListener('DOMContentLoaded', () => {

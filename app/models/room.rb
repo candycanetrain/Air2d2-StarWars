@@ -19,7 +19,7 @@
 #
 
 class Room < ApplicationRecord
-  validates :name, :city, :price, :lat, :lng, :description, :bedrooms, :beds, :bathrooms, :homeType, :accommodates, presence: true
+  validates :name, :city, :price, :lat, :lng, :description, :bedrooms, :beds, :bathrooms, :homeType, :accommodates, :img_url, presence: true
 
 
   

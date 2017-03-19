@@ -1,4 +1,5 @@
 export const selectRoom = ({rooms}, id) => {
+  debugger
   const room = rooms[id] || {};
   return room
 }

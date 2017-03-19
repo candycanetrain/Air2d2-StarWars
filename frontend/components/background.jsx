@@ -3,7 +3,7 @@ import React from 'react';
 
 const Background = () => (
   <div>
-    <img src="assets/space.jpg" alt="" />
+    <h1>background here</h1>
   </div>
 );
 
