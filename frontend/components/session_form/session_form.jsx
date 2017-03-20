@@ -110,7 +110,6 @@ class SessionForm extends React.Component {
 					<br/>
 					<br/>
           <div className="login-signup-modal">
-            
             <form onSubmit={this.handleSubmit} >
               {this.renderErrors()}
               <div className="login-form">

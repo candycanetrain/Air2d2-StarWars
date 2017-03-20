@@ -12,6 +12,7 @@ class Api::RoomsController < ApplicationController
   end
 
   def index
+    #logic to filter rooms here. (where(parmas))
     @rooms = Room.all
   end
 
