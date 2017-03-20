@@ -14,11 +14,11 @@ button {
 	background-color: $white;
 	border-color: $white;
 	color: black;
-	font-weight: bold;
+	font-weight: none;
 	padding: 7px 9px;
 	border-radius: 3px;
 	transition: background-color 0.3s;
-	font-family: $sans-serif;
+	font-family: $circular;
 	text-transform: inherit;
 	font-size: 11px;
 	text-align: center;
@@ -110,7 +110,7 @@ hr {
 
 .input-wrapper input {
 	flex: 1;
-	font-family: $sans-serif;
+	font-family: $circular;
 	padding: 0 10px;
 	border: 1px solid $gray;
 	border-right: none;

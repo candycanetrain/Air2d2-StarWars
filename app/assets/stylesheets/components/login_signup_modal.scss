@@ -1,7 +1,19 @@
+.welcome-message {
+  display: flex;
+  color: $gray;
+  font-family: $circular;
+  line-height: 34px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .login-signup-modal {
   color: $salmon;
   font-family: $gray;
   background-color: $white;
+  position: relative;
+  width: 386px;
+  max-width: 100%;
 }
 
 .control-group {
@@ -13,11 +25,25 @@
   justify-content: space-between;
 }
 
+.toggle-signup-login {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.signup-demo {
+  display: flex;
+  align-items: baseline;
+  :last-child {
+    margin-left: 10px;
+  }
+}
+
 .toggle-button {
   border: 1px solid $salmon;
   background-color: $white;
   color: $salmon;
   font-weight: normal;
+  
 }
 
 .submit-button {
@@ -27,11 +53,15 @@
   color: $white;
   padding: 20px 27px;
   justify-content: center;
+  font-weight: none;
+  margin-bottom: 15px;
 }
+
+
 
 .toggle-message {
   display: inline-block;
-  font-color: $gray;
+  color: $gray;
   font-family: $circular;
   margin-right: 4px;
   line-height: 34px;

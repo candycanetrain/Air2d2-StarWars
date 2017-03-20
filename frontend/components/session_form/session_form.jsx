@@ -37,9 +37,9 @@ class SessionForm extends React.Component {
 
   navLink(){
     if(this.state.modalType === "login") {
-			return <button className="toggle-button" onClick={this.openModal.bind(this, 'signup')}>sign up instead!</button>;
+			return <button className="toggle-button" onClick={this.openModal.bind(this, 'signup')}>Sign up</button>;
     } else {
-        return <button className="toggle-button" onClick={this.openModal.bind(this, 'login')}>Login instead!</button>;      
+        return <button className="toggle-button" onClick={this.openModal.bind(this, 'login')}>Log in</button>;      
     }
   }
 
@@ -106,7 +106,7 @@ class SessionForm extends React.Component {
 					isOpen={this.state.modalOpen}
 					onRequestClose={this.closeModal}
 					style={ModalStyle}>
-					Welcome to Air2d2!
+					<div className="welcome-message">Welcome to Air2d2!</div>
 					<br/>
 					<br/>
           <div className="login-signup-modal">
@@ -147,9 +147,10 @@ class SessionForm extends React.Component {
             </form>
             <div className="toggle-signup-login">
               <div className="toggle">{this.toggleMessage()}</div> 
-              <button className="guest-login" onClick={this.guestLogin.bind(this)}>Demo Guest</button>
-              <div className="toggle">{this.navLink()}</div>
-              
+              <div className="signup-demo">
+                <div className="toggle">{this.navLink()}</div>
+                <button className="toggle-button" onClick={this.guestLogin.bind(this)}>Log in as Demo</button>                            
+              </div>
             </div>
           </div>
 				</Modal>

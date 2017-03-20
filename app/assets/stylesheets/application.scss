@@ -17,15 +17,15 @@
 @import "font-awesome";
 
 // CSS Reset
-@import "base/reset.css.scss";
+@import "base/reset.scss";
 
 // Core
-@import "base/colors.css.scss";
-@import "base/fonts.css.scss";
-@import "base/layout.css.scss";
+@import "base/colors.scss";
+@import "base/fonts.scss";
+@import "base/layout.scss";
 
 // Grid
-@import "base/grid.css.scss";
+@import "base/grid.scss";
 
 // Components
 @import "components/*";
