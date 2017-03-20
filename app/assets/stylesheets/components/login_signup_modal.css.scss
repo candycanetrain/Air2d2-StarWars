@@ -5,9 +5,12 @@
 }
 
 .control-group {
+  display: flex;  
   border: 1px solid $light-gray;
   font-size: 16px;
-  padding: 10px 35px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  color: $gray;
+  justify-content: space-between;
 }
 
 .toggle-button {
@@ -24,4 +27,14 @@
   color: $white;
   padding: 20px 27px;
   justify-content: center;
+}
+
+.toggle-message {
+  display: inline-block;
+  font-color: $gray;
+  font-family: $circular;
+  margin-right: 4px;
+  line-height: 34px;
+  font-size: 16px;
+  float: left;
 }

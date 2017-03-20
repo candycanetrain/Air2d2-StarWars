@@ -11,20 +11,21 @@ class CurrentRoomShow extends React.Component {
 
   render() {
     debugger
+    const room = this.props.room
     return(
       <div>
         <ul className="current-room">
-          <img src={img_url} alt=""/>
-          <li>Name: {}</li>
-          <li>City: {}</li>
-          <li>Price: {}</li>
-          <li>Description: {}</li>
-          <li>Bedrooms: {}</li>
-          <li>Beds: {}</li>
-          <li>Bathrooms: {}</li>
-          <li>Home Type: {}</li>
-          <li>Accommodates: {}</li>
-          <li>Amenities: {}</li>
+          <img src={room.img_url} alt=""/>
+          <li>Name: {room.name}</li>
+          <li>City: {room.city}</li>
+          <li>Price: {room.price}</li>
+          <li>Description: {room.description}</li>
+          <li>Bedrooms: {room.bedrooms}</li>
+          <li>Beds: {room.beds}</li>
+          <li>Bathrooms: {room.bathrooms}</li>
+          <li>Home Type: {room.homeType}</li>
+          <li>Accommodates: {room.accommodates}</li>
+          <li>Amenities: {room.amenities}</li>
           
         </ul>
         <br/>

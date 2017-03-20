@@ -97,9 +97,9 @@ class SessionForm extends React.Component {
     return (
 			<div>
         <nav className="login-signup">
-					<button onClick={this.openModal.bind(this, 'login')}>Login</button>
-					&nbsp;or&nbsp;
-					<button onClick={this.openModal.bind(this, 'signup')}>Sign up!</button>
+          <button className="nav-button" onClick={this.openModal.bind(this, 'signup')}>Sign up</button>
+					<button className="nav-button" onClick={this.openModal.bind(this, 'login')}>Login</button>
+					
 				</nav>
 				<Modal
 					contentLabel="Modal"

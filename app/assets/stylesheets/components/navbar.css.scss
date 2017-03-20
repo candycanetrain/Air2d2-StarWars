@@ -18,3 +18,14 @@
   position: relative;
   font-size: 13px;
 }
+
+.nav-button {
+  font-family: $circular;
+  color: $gray;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;    
+  position: relative;
+  font-size: 13px;
+  font-weight: normal;
+}
