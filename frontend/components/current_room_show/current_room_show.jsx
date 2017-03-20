@@ -8,10 +8,18 @@ import RoomMap from '../room_map/room_map';
 class CurrentRoomShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = props.room;
   }
 
+  componentWillReceiveProps(newProps) {
+    this.setState(newProps.room);
+  }
+  componentDidMount() {
+    this.props.fetchRoom(this.props.roomId);
+  }
+  
+
   render() {
-    // debugger need to fix this
     const room = this.props.room
     return(
       <div className="show-page">

@@ -8,9 +8,7 @@ import Home from './home';
 const App = ({children}) => (
   <div>
     <Home />
-    <section className="SearchIndexContainer">
-     <Search />
-    </section>
+   
 
     {children}
   </div>

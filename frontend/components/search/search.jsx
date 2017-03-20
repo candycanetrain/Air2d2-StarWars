@@ -5,22 +5,29 @@ import { withRouter } from 'react-router';
 //import {RoomIndex} from '../rooms/room_index';
 
 class Search extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  handleForm(city, startDate, endDate, guests) {
+
+  }
 
   render() {
 
     return(
       <div className="user-pane">
         <div className="search-form-row">
-          <form action="" className="search-form">
+          <form action="" id="search-form1" className="search-form">
             <ul className="search-form-ul">
               <li className="search-form-location">
-                <label for="search-location" className="search-form-label">Where</label>
+                <label htmlFor="search-location" className="search-form-label">Where</label>
                 <br />
-                <input type="text" className="location-input" name="location" id="search-location" placeholder="City"/>
+                <input type="text" className="location-input" name="city" id="search-location" placeholder="City"/>
               </li>
 
               <li className="search-form-dates"> 
-                <label for="search-dates" className="search-form-label">When</label>
+                <label htmlFor="search-dates" className="search-form-label">When</label>
                 <br />
                 
                     <input type="text" className="date-input" name="startDate" placeholder="Check In"/>
@@ -29,7 +36,7 @@ class Search extends React.Component {
               </li>
 
               <li className="search-form-guests">
-                <label for="search-guests" className="search-form-guests">Guests</label>
+                <label htmlFor="search-guests" className="search-form-guests">Guests</label>
                 <br />
                 
                 <select className="guests-input" name="guests" id="search-guests" placeholder="2 Guests">  
@@ -50,10 +57,11 @@ class Search extends React.Component {
 
               
             </ul>
-                <button className="search-button">
-                  <i className="fa fa-search" aria-hidden="true"></i>
-                </button>
+            
           </form>
+          <button type="submit" form="search-form1" value="Submit" className="search-button">
+              <i className="fa fa-search" aria-hidden="true"></i>
+          </button>
           
         </div>
       </div>

@@ -8,8 +8,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchRooms: () => dispatch(fetchRooms()),
-  fetchRoom: () => dispatch(fetchRoom())
+  fetchRooms: (params) => dispatch(fetchRooms(params)),
+  fetchRoom: (id) => dispatch(fetchRoom(id))
 }); 
 
 export default connect(

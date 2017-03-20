@@ -7,7 +7,7 @@ import CurrentRoomShow from './current_room_show';
 
 const mapStateToProps = (state, {params}) => {
   const roomId = parseInt(params.roomId);
-  const room = selectRoom(state, roomId); 
+  const room = state.currentRoom;
   return {
     roomId,
     room

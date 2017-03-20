@@ -1,7 +1,13 @@
 .home {
   background-image: url("http://res.cloudinary.com/candycanetrain/image/upload/v1489979630/Theed-MoaTM_xxijdg.png");
-  display: inline-block;
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
+  max-width: 712px; 
+  min-width: 300px;
+  height: 300px;
+  z-index: -1;
+  align-content: space-between;
 }
 

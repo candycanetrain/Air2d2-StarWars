@@ -13,7 +13,26 @@ class Api::RoomsController < ApplicationController
 
   def index
     #logic to filter rooms here. (where(parmas))
-    @rooms = Room.all
+    all_rooms = Room.all
+    
+    if number_to_display != nil
+      @rooms = Array.new();
+      all_rooms.each do |room|
+        if (@rooms.length < number_to_display) && (number_to_display < all_rooms.length)
+          @rooms.push(room)
+        end
+      end
+      @rooms
+    elsif city != nil
+      @rooms = Array.new();
+      all_rooms.each do |room|
+        @rooms.push(room) if room.city == city
+      end
+      @rooms
+    else
+      @rooms = all_rooms
+    end
+    
   end
 
   def show
@@ -23,6 +42,15 @@ class Api::RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:id, :name, :city, :description, :location, :price, :bedrooms, :beds, :bathrooms, :homeType, :accommodates, :amenities)
+    params.require(:room).permit(:id, :name, :city, :description, :location, :price, :bedrooms, :beds, :bathrooms, :homeType, :accommodates, :amenities, :number_to_display)
   end
+
+  def number_to_display
+    room_params[:number_to_display].to_i;
+  end
+
+  def city
+    room_params[:city];
+  end
+  
 end
