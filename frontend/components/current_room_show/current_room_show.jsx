@@ -10,6 +10,7 @@ class CurrentRoomShow extends React.Component {
   }
 
   render() {
+    // debugger need to fix this
     const room = this.props.room
     return(
       <div>

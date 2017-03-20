@@ -14,7 +14,7 @@ class RoomIndex extends React.Component {
         <h1 className="room-index-header">Featured Rooms:</h1>
         <ul className="featured-rooms-list">
           {rooms.map((room) => (
-            <li className="featured-room">
+            <li className="featured-room" key={room.id}>
               <RoomIndexItem room={room} key={room.id}/>
             </li>
           ))}
