@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import RoomMap from '../room_map/room_map';
 
 // import RoomDetail from './room_detail';
 
@@ -29,7 +30,7 @@ class CurrentRoomShow extends React.Component {
           
         </ul>
         <br/>
-
+        <RoomMap />
         <div className="reviews">
           <h3>Reviews</h3>
         </div>

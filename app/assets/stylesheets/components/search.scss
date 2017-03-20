@@ -1,12 +1,52 @@
+.user-pane {
+}
+
+.search-form {
+  display: flex;
+}
 .search-form-row {
   display:flex;
   width: 100%;
+  
 }
 
-.search-form > div {
+.search-form-ul {
+  display: flex;
+  align-items: baseline;
+
+}
+.search-form-ul > li {
+  
+  display: inline-block;
+  border-left: 1px $light-gray solid;
+  border-top: 1px $light-gray solid;
+  border-bottom: 1px $light-gray solid;
+  :last-child {
+    border-right: 1px $light-gray solid;
+    
+  }
+}
+.search-dates {
+  display: inline;
+}
+.search-dates-div {
+  display: flex;
+}
+.search-dates-div input {
+  display: inline;
+}
+.date-input {
   display: inline;
 }
 
-.date-input {
+.search-button {
+  background-color: $turquoise;
+  display: inline;
+}
+
+.li > label {
+  display: inline;
+}
+.li > input {
   display: inline;
 }
