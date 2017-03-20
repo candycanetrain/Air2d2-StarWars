@@ -1,0 +1,15 @@
+.featured-rooms-list {
+  display: flex;
+  justify-content: space-between;
+}
+.room-index-item {
+  display: inline-block;
+  max-height: 400px;
+  max-width: 400px;
+  margin: 5px;
+}
+
+.featured-room-img {
+  max-height: 300px;
+  max-width: 350px;
+}

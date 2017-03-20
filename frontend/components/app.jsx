@@ -6,6 +6,7 @@ const App = ({children}) => (
   <div>
     <Header />
     <Background />
+    
     <section className="SearchIndexContainer">
       SearchContainer Here
     </section>

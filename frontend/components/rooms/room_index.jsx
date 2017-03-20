@@ -4,19 +4,21 @@ import RoomIndexItem from './room_index_item';
 
 class RoomIndex extends React.Component {
   componentDidMount() {
-
+    this.props.fetchRooms();
   }
 
   render() {
     const rooms = this.props.rooms
     return (
       <div className="room-index-body"> 
-        <h1 className="room-index-header">Rooms:</h1>
-        <div className="rooms">
-          {rooms.map((room) => 
-            <RoomIndexItem room={room} key={room.id}/>
-          )}
-        </div>
+        <h1 className="room-index-header">Featured Rooms:</h1>
+        <ul className="featured-rooms-list">
+          {rooms.map((room) => (
+            <li className="featured-room">
+              <RoomIndexItem room={room} key={room.id}/>
+            </li>
+          ))}
+        </ul>
       </div>
     )
   }
