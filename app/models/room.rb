@@ -21,6 +21,7 @@
 class Room < ApplicationRecord
   validates :name, :city, :price, :lat, :lng, :description, :bedrooms, :beds, :bathrooms, :homeType, :accommodates, :img_url, presence: true
 
-
+  has_many :bookings
+  has_many :users, through: :bookings, source: :user
   
 end

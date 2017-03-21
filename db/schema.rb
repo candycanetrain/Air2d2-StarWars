@@ -18,12 +18,14 @@ ActiveRecord::Schema.define(version: 20170319182004) do
   create_table "bookings", force: :cascade do |t|
     t.integer  "user_id",    null: false
     t.integer  "room_id",    null: false
-    t.date     "start_time", null: false
-    t.date     "end_time",   null: false
+    t.date     "start_date", null: false
+    t.date     "end_date",   null: false
     t.integer  "party_size", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["end_date"], name: "index_bookings_on_end_date", using: :btree
     t.index ["room_id"], name: "index_bookings_on_room_id", using: :btree
+    t.index ["start_date"], name: "index_bookings_on_start_date", using: :btree
     t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree
   end
 

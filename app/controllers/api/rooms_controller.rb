@@ -17,12 +17,12 @@ class Api::RoomsController < ApplicationController
     all_rooms = Room.all
     
     if number_to_display != 0
-      @rooms = Array.new();
-      all_rooms.each do |room|
-        if (@rooms.length < number_to_display) && (number_to_display < all_rooms.length)
-          @rooms.push(room)
-        end
-      end
+      @rooms = Room.all.limit(number_to_display)
+      # all_rooms.each do |room|
+      #   if (@rooms.length < number_to_display) && (number_to_display <= all_rooms.length)
+      #     @rooms.push(room)
+      #   end
+      # end
       @rooms
     elsif city != nil
       @rooms = Array.new();
