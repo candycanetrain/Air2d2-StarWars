@@ -29,5 +29,9 @@ class Booking < ApplicationRecord
     end
   end
 
+  def overlaps?(other)
+    
+  end
+
 
 end

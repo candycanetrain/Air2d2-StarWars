@@ -13,7 +13,7 @@ class Api::RoomsController < ApplicationController
 
   def index
     #logic to filter rooms here. (where(parmas))
-    debugger
+    # debugger
     all_rooms = Room.all
     
     if number_to_display != 0

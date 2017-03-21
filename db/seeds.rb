@@ -21,3 +21,14 @@ Room.create(name: "Yoda's Hut", city: "Dagobah", price: "4242.89", lat: 37.80248
 Room.create(name: "Fortified Compound", city: "Mustafar", price: "4242.89", lat: 37.889486, lng: -122.610855, description: "Spectacular views of the lava flows on Mustafar, this fortress has a very isolated location and top of the line security for all of your Sith secrets. Shielded from the intense heat and magma so you can enjoy your stay without burning to a crisp.", bedrooms: 6, beds: 12, bathrooms: 4, homeType: "fortress", img_url: "http://res.cloudinary.com/candycanetrain/image/upload/c_scale,h_400/v1489946009/SidiousMustafarLab-CotF_oxhfn2.png", accommodates: 12);
 
 Room.create(name: "Padme's Apartment", city: "Coruscant", price: "4242.89", lat: 37.357714, lng: -121.920776, description: "A luxury apartment in the heart of Coruscant, this apartment has a prime location, just minutes away from the Senate building and the Jedi Temple. Spacious and luxurious with many amenities and a breathtaking view of the city. Perfect for romantic nights with a secret lover.", bedrooms: 2, beds: 2, bathrooms: 2, homeType: "apartment", img_url: "http://res.cloudinary.com/candycanetrain/image/upload/c_scale,h_400/v1489946010/Padmebalcony_plx4sg.png", accommodates: 4);
+
+
+Booking.create(user_id: 1, room_id: 1, start_date: DateTime.new(2017, 3,20), end_date: DateTime.new(2017, 3, 25), party_size: 2);
+Booking.create(user_id: 1, room_id: 2, start_date: DateTime.new(2017, 3,26), end_date: DateTime.new(2017, 3, 28), party_size: 2);
+Booking.create(user_id: 1, room_id: 3, start_date: DateTime.new(2017, 3,30), end_date: DateTime.new(2017, 4, 5), party_size: 2);
+Booking.create(user_id: 1, room_id: 4, start_date: DateTime.new(2017, 4,8), end_date: DateTime.new(2017, 4, 20), party_size: 2);
+
+Booking.create(user_id: 3, room_id: 1, start_date: DateTime.new(2017, 3,26), end_date: DateTime.new(2017, 3, 27), party_size: 3);
+Booking.create(user_id: 3, room_id: 4, start_date: DateTime.new(2017, 3,28), end_date: DateTime.new(2017, 3, 29), party_size: 3);
+Booking.create(user_id: 3, room_id: 2, start_date: DateTime.new(2017, 3,30), end_date: DateTime.new(2017, 4, 1), party_size: 3);
+Booking.create(user_id: 3, room_id: 1, start_date: DateTime.new(2017, 4,2), end_date: DateTime.new(2017, 4, 3), party_size: 3);
