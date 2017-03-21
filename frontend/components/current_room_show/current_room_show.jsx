@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import RoomMap from '../room_map/room_map';
+import BookingContainer from '../booking/booking_container';
 
 // import RoomDetail from './room_detail';
 
@@ -43,7 +44,8 @@ class CurrentRoomShow extends React.Component {
         </div>
           
         <br/>
-        <RoomMap />
+
+        <BookingContainer currentRoom={room}/>
 
         
       </div>

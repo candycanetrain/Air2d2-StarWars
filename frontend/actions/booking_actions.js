@@ -1,4 +1,4 @@
-import * as BookingUtil from './util.booking_api_util';
+import * as BookingUtil from '../util/booking_api_util';
 
 export const RECEIVE_BOOKING = "RECEIVE_BOOKING";
 export const RECEIVE_BOOKINGS = "RECEIVE_BOOKINGS";
@@ -21,7 +21,6 @@ export const fetchBooking = (id) => dispatch => (
 export const createBooking = booking => dispatch => (
   BookingUtil.createBooking(booking)
     .then(booking => dispatch(receiveBooking(booking)))
-  })
 );
 
 export const receiveBookings = (bookings) => ({
@@ -34,10 +33,10 @@ export const receiveBooking = (booking) =>  ({
   booking
 });
 
-export const createBooking = (booking) => ({
-  type: CREATE_BOOKING,
-  booking
-}); 
+// export const createBooking = (booking) => ({
+//   type: CREATE_BOOKING,
+//   booking
+// }); 
 
 export const deleteBooking = (id) => ({
    type: DELETE_BOOKING,
