@@ -29,9 +29,19 @@ class Search extends React.Component {
             <li className="search-form-dates"> 
               <label htmlFor="search-dates" className="search-form-label">When</label>
               <br />
-              
-                  <input type="text" className="date-input" name="startDate" placeholder="Check In"/>
-                  <input type="text" className="date-input" name="endDate" placeholder="Check Out"/>
+
+              <div class="modal-body">
+                <div id="datetimepicker1" class="input-append date">
+                  <input data-format="dd/MM/yyyy" type="text" className="date-input" name="startDate" placeholder="Check In"></input>
+                  <span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div id="datetimepicker1" class="input-append date">
+                  <input data-format="dd/MM/yyyy" type="text" className="date-input" name="endDate" placeholder="Check Out"></input>
+                  <span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+                </div>
+              </div>
           
             </li>
 
@@ -60,6 +70,10 @@ class Search extends React.Component {
         <button type="submit" onClick={this.handleForm.bind(this)} className="search-button">
             <i className="fa fa-search" aria-hidden="true"></i>
         </button>
+
+
+ 
+      
         
       </div>
     );

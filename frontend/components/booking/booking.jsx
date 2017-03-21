@@ -18,13 +18,12 @@ class Booking extends React.Component {
   
 
   render() {
-    // debugger
     return(
       <div className="booking">
         <div className="booking-header">
           <div className="booking-header-item">
             <span className="booking-header-item-price">
-              Price Here
+              Price Here {this.props.room.price}
             </span>
           </div>
          
