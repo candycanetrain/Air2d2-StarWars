@@ -9,7 +9,7 @@ class Booking extends React.Component {
 
 
   componentWillReceiveProps(newProps) {
-    debugger
+    // debugger
     this.setState(newProps.room);
   }
 
@@ -18,7 +18,7 @@ class Booking extends React.Component {
   
 
   render() {
-    debugger
+    // debugger
     return(
       <div className="booking">
         <div className="booking-header">

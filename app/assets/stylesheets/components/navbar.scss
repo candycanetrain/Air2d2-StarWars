@@ -1,11 +1,12 @@
 .navbar-login-signup {
-  display: flex;
+  position: absolute;
   justify-content: space-between;
   align-items: center;
   font-family: $circular;
   font-size: 20px;
   color: $gray;
   background-color: transparent;
+  z-index: 1;
 }
 
 .navbar-login-signup > li {
@@ -28,6 +29,7 @@
   position: relative;
   font-size: 13px;
   font-weight: normal;
+  background-color: transparent;
 }
 
 .nav-group {

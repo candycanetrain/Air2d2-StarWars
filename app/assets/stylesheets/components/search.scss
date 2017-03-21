@@ -1,7 +1,11 @@
 .user-pane {
+
+  position: absolute;
+  z-index: 1;
 }
 
 .search-form {
+  z-index: 1;
   display: flex;
 }
 .search-form-row {

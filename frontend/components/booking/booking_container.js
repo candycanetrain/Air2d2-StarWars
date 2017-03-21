@@ -5,7 +5,7 @@ import { createBooking } from '../../actions/booking_actions';
 import Booking from './booking';
 
 const mapStateToProps = (state, {params}) => {
-  debugger
+  // debugger
   const currentUser = state.session.currentUser;
   const room = state.currentRoom;
   return {
