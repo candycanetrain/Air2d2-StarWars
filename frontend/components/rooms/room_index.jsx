@@ -4,7 +4,7 @@ import RoomIndexItem from './room_index_item';
 
 class RoomIndex extends React.Component {
   componentDidMount() {
-    this.props.fetchRooms({number_to_display: 2});
+    // this.props.fetchRooms({number_to_display: 2});
   }
 
   render() {

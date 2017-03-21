@@ -13,9 +13,10 @@ class Api::RoomsController < ApplicationController
 
   def index
     #logic to filter rooms here. (where(parmas))
+    debugger
     all_rooms = Room.all
     
-    if number_to_display != nil
+    if number_to_display != 0
       @rooms = Array.new();
       all_rooms.each do |room|
         if (@rooms.length < number_to_display) && (number_to_display < all_rooms.length)
@@ -52,5 +53,7 @@ class Api::RoomsController < ApplicationController
   def city
     room_params[:city];
   end
+
+
   
 end

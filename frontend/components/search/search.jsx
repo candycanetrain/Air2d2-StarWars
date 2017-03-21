@@ -9,8 +9,9 @@ class Search extends React.Component {
     super(props);
   }
 
-  handleForm(city, startDate, endDate, guests) {
-
+  handleForm(e) {
+    e.preventDefault();
+    this.props.fetchRooms({city: city, startDate: startDate, endDate: endDate, guests: guests})
   }
 
   render() {
@@ -18,7 +19,7 @@ class Search extends React.Component {
     return(
       <div className="user-pane">
         <div className="search-form-row">
-          <form action="" id="search-form1" className="search-form">
+          <form id="search-form1" className="search-form">
             <ul className="search-form-ul">
               <li className="search-form-location">
                 <label htmlFor="search-location" className="search-form-label">Where</label>
@@ -54,12 +55,10 @@ class Search extends React.Component {
                   <option value="12">12 guests</option>
                 </select>  
               </li>
-
-              
             </ul>
             
           </form>
-          <button type="submit" form="search-form1" value="Submit" className="search-button">
+          <button type="submit" onClick={this.handleForm.bind(this)} className="search-button">
               <i className="fa fa-search" aria-hidden="true"></i>
           </button>
           
