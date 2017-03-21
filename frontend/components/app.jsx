@@ -7,9 +7,7 @@ import Home from './home';
 
 const App = ({children}) => (
   <div>
-    <Home />
-   
-
+    <Header />
     {children}
   </div>
 );

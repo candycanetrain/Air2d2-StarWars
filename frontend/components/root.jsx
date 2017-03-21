@@ -9,6 +9,8 @@ import SessionFormContainer from './session_form/session_form_container';
 import RoomIndexContainer from './rooms/room_index_container';
 import CurrentRoomShowContainer from './current_room_show/current_room_show_container';
 import RoomMap from './room_map/room_map';
+import Home from './home';
+
 
 const Root = ({store}) => {
 
@@ -23,7 +25,7 @@ const Root = ({store}) => {
     <Provider store={store}>
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
-          <IndexRoute component={ RoomIndexContainer} />
+          <IndexRoute component={ Home} />
           <Route path="/rooms/:roomId" component={CurrentRoomShowContainer} />
         </Route>
       </Router>
