@@ -1,12 +1,12 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import { DateRangePicker } from 'react-dates';
+import { DateRangePicker, SingleDatePicker } from 'react-dates';
 import DatePicker from 'react-datepicker';
 import {START_DATE, END_DATE} from 'react-dates/constants';
 import {hashHistory} from 'react-router';
 import moment from 'moment';
 
-
+// import '../../../app/assets/stylesheets/components/datepicker.css';
 //
 //import RoomMap from '../room_map/room_map';
 //import {RoomIndex} from '../rooms/room_index';
@@ -19,6 +19,21 @@ class Search extends React.Component {
       party_size: 0,
       focus: null
     };
+    this.search = this.search.bind(this);    
+    this.update = this.update.bind(this);
+    this.handleFocusChange = this.handleFocusChange.bind(this);
+  }
+
+  search(e) {
+    e.preventDefault();
+    const startDate = this.state.startDate ? this.state.startDate._d : '';
+    const endDate = this.state.endDate ? this.state.endDate._d : '';
+    this.props.searchRoom({
+      city: this.state.city,
+      party_size: this.state.party_size,
+      startDate: startDate,
+      endDate: endDate
+    }).then(hashHistory.push('/search'));
   }
 
   update(property) {
@@ -28,19 +43,21 @@ class Search extends React.Component {
     );
   }
 
-  handleChangeStartDate(date) {
-    this.setState({
-      startDate: date
-    });
+  handleFocusChange(focus){
+    this.setState({focus});
   }
 
-  handleChangeEndDate(date) {
-    this.setState({
-      endDate: date
-    });
-  }
+  // handleChangeStartDate(date) {
+  //   this.setState({
+  //     startDate: date
+  //   });
+  // }
 
-
+  // handleChangeEndDate(date) {
+  //   this.setState({
+  //     endDate: date
+  //   });
+  // }
 
   handleForm(e) {
     e.preventDefault();
@@ -62,17 +79,14 @@ class Search extends React.Component {
               <label htmlFor="search-dates" className="search-form-label">When</label>
               <br />
 
-               <DateRangePicker
-                  id="date_input"
-                  date={this.state.date}
-                  focused={this.state.focused}
-                  onDateChange={(date) => { this.setState({ date }); }}
-                  onFocusChange={({ focused }) => { this.setState({ focused }); }}
-                />
-
-                  <input type="text" className="date-input" name="startDate" placeholder="Check In"/>
-                  <input type="text" className="date-input" name="endDate" placeholder="Check Out"/>
-          
+              <DateRangePicker
+                id="date_input"
+                startDate={this.state.startDate}
+                endDate={this.state.endDate}
+                focusedInput={this.state.focus}
+                onDatesChange={({startDate, endDate}) => { this.setState({ startDate, endDate }); }}
+                onFocusChange={this.handleFocusChange}
+              />
             </li>
 
             <li className="search-form-guests">
