@@ -24,19 +24,20 @@ class CurrentRoomShow extends React.Component {
     const room = this.props.room
     return(
       <div className="show-page">
+        <img className="show-img" src={room.img_url} alt=""/>
         <div className="show-details">
           <ul className="current-room">
-            <img src={room.img_url} alt=""/>
-            <li>Name: {room.name}</li>
-            <li>City: {room.city}</li>
-            <li>Price: {room.price}</li>
-            <li>Description: {room.description}</li>
-            <li>Bedrooms: {room.bedrooms}</li>
-            <li>Beds: {room.beds}</li>
-            <li>Bathrooms: {room.bathrooms}</li>
-            <li>Home Type: {room.homeType}</li>
-            <li>Accommodates: {room.accommodates}</li>
-            <li>Amenities: {room.amenities}</li>
+            
+            <li><label className="detail-labels" id="detail-name">Name: </label> {room.name}</li>
+            <li><label className="detail-labels" id="detail-city">City: </label> {room.city}</li>
+            <li><label className="detail-labels" id="detail-price">Price: </label> {room.price}</li>
+            <li><label className="detail-labels" id="detail-descripton">Description: </label> {room.description}</li>
+            <li><label className="detail-labels" id="details">Bedrooms: </label> {room.bedrooms}</li>
+            <li><label className="detail-labels" id="details">Beds: </label> {room.beds}</li>
+            <li><label className="detail-labels" id="details">Bathrooms: </label> {room.bathrooms}</li>
+            <li><label className="detail-labels" id="details">Home Type: </label> {room.homeType}</li>
+            <li><label className="detail-labels" id="details">Accommodates: </label> {room.accommodates}</li>
+            <li><label className="detail-labels" id="details">Amenities: </label> {room.amenities}</li>
           </ul>
           <div className="reviews">
             <h3>Reviews</h3>
