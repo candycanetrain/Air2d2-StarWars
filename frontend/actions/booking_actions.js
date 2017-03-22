@@ -6,6 +6,7 @@ export const CREATE_BOOKING = "CREATE_BOOKING";
 export const DELETE_BOOKING = "DELETE_BOOKING";
 export const UPDATE_BOOKING = "UPDATE_BOOKING";
 export const RECEIVE_BOOKING_ERRORS = "RECEIVE_BOOKING_ERRORS";
+import {hashHistory} from 'react-router';
 
 export const fetchBookings = () => dispatch => {
  return(
@@ -21,7 +22,7 @@ export const fetchBooking = (id) => dispatch => (
 export const createBooking = booking => dispatch => (
   BookingUtil.createBooking(booking)
     .then(booking => dispatch(receiveBooking(booking)),
-    err => dispatch(receiveBookingErrors(err.responseJSON)))
+    err => dispatch(receiveBookingErrors(err.responseJSON))).then(hashHistory.push("/"))
 );
 
 export const receiveBookings = (bookings) => ({
