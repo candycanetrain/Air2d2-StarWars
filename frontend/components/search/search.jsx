@@ -29,7 +29,9 @@ class Search extends React.Component {
   handleForm(e) {
     // debugger
     e.preventDefault();
-    const searchFilters = {city: this.state.city, startDate: this.state.startDate._d, endDate: this.state.endDate._d, party_size: this.state.party_size}
+    const startDate = this.state.startDate ? this.state.startDate._d : new Date();
+    const endDate = this.state.endDate ? this.state.endDate._d : new Date();
+    const searchFilters = {city: this.state.city, startDate: this.state.startDate, endDate: this.state.endDate, party_size: this.state.party_size}
     this.props.fetchRooms(searchFilters).then(hashHistory.push('/search'));
   }
 
