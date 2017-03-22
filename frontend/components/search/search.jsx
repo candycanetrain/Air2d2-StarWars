@@ -19,27 +19,25 @@ class Search extends React.Component {
       party_size: 0,
       focus: null
     };
-    this.search = this.search.bind(this);    
     this.update = this.update.bind(this);
     this.handleFocusChange = this.handleFocusChange.bind(this);
+    this.handleForm = this.handleForm.bind(this);
   }
 
-  search(e) {
+ 
+
+  handleForm(e) {
+    // debugger
     e.preventDefault();
+    const searchFilters = {city: this.state.city, startDate: this.state.startDate._d, endDate: this.state.endDate._d, party_size: this.state.party_size}
+    this.props.fetchRooms(searchFilters).then(hashHistory.push('/search'));
+  }
+
+  update(field) {
     const startDate = this.state.startDate ? this.state.startDate._d : '';
     const endDate = this.state.endDate ? this.state.endDate._d : '';
-    this.props.searchRoom({
-      city: this.state.city,
-      party_size: this.state.party_size,
-      startDate: startDate,
-      endDate: endDate
-    }).then(hashHistory.push('/search'));
-  }
-
-  update(property) {
-    e.preventDefault();
     return e => (
-      this.setState({[property]: e.target.value})
+      this.setState({[field]: e.target.value})
     );
   }
 
@@ -59,10 +57,7 @@ class Search extends React.Component {
   //   });
   // }
 
-  handleForm(e) {
-    e.preventDefault();
-    this.props.fetchRooms({city: city, startDate: startDate, endDate: endDate, guests: guests})
-  }
+  
 
   render() {
     return(
@@ -72,7 +67,7 @@ class Search extends React.Component {
             <li className="search-form-location">
               <label htmlFor="search-location" className="search-form-label">Where</label>
               <br />
-              <input type="text" className="location-input" name="city" id="search-location" placeholder="City"/>
+              <input type="text" className="location-input" name="city" id="search-location" placeholder="City" onChange={this.update('city')}/>
             </li>
 
             <li className="search-form-dates"> 
@@ -80,7 +75,6 @@ class Search extends React.Component {
               <br />
 
               <DateRangePicker
-                id="date_input"
                 startDate={this.state.startDate}
                 endDate={this.state.endDate}
                 focusedInput={this.state.focus}
@@ -93,7 +87,7 @@ class Search extends React.Component {
               <label htmlFor="search-guests" className="search-form-guests">Guests</label>
               <br />
               
-              <select className="guests-input" name="party_size" id="search-guests" placeholder="2 Guests">  
+              <select className="guests-input" name="party_size" id="search-guests" placeholder="2 Guests" onChange={this.update('party_size')}>  
                 <option value="1">1 guest</option>
                 <option value="2">2 guests</option>
                 <option value="3">3 guests</option>
@@ -111,7 +105,7 @@ class Search extends React.Component {
           </ul>
           
         </form>
-        <button type="submit" onClick={this.handleForm.bind(this)} className="search-button">
+        <button type="submit" onClick={this.handleForm} className="search-button">
             <i className="fa fa-search" aria-hidden="true"></i>
         </button>
         

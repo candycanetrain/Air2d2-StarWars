@@ -24,4 +24,9 @@ class Room < ApplicationRecord
   has_many :bookings
   has_many :users, through: :bookings, source: :user
   
+  #logic to check for overlapping booking goes here
+  #def overlapping/available(takes in start date and end date)
+    #any bookings overlapping with this time frame?
+  #end
+
 end

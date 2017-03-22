@@ -27,6 +27,7 @@ const Root = ({store}) => {
         <Route path="/" component={ App }>
           <IndexRoute component={ Home} />
           <Route path="/rooms/:roomId" component={CurrentRoomShowContainer} />
+          <Route path="/search" component={RoomIndexContainer} />
         </Route>
       </Router>
     </Provider>

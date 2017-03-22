@@ -43,7 +43,7 @@ class Api::RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:id, :name, :city, :description, :location, :price, :bedrooms, :beds, :bathrooms, :homeType, :accommodates, :amenities, :number_to_display)
+    params.require(:room).permit(:id, :name, :city, :description, :lat, :lng, :price, :bedrooms, :beds, :bathrooms, :homeType, :accommodates, :amenities, :number_to_display, :startDate, :endDate, :party_size)
   end
 
   def number_to_display
@@ -53,6 +53,19 @@ class Api::RoomsController < ApplicationController
   def city
     room_params[:city];
   end
+
+  def party_size
+    room_params[:party_size];
+  end
+
+  def start_date
+    room_params[:startDate];
+  end
+
+  def end_date
+    room_params[:endDate];
+  end
+  
 
 
   
