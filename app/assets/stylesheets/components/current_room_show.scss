@@ -1,5 +1,60 @@
-// .show-page {
-//   display: flex;
-//   justify-content: space-between;
+.show-page {
+  // display: flex;
+  // justify-content: space-between;
+  width: 100%;
+}
+
+.short-summary {
+  border: 1px solid $gray;
+
+}
+.detail-name {
+  font-size: 24px;
+  font-weight: bold;
+  left: 0;
+  display: block;
+}
+
+.detail-city {
+  font-size: 14px;
+  font-weight: normal;
+  left: 0;
+  display: block;
+}
+
+.big-details {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.big-details-col {
+    margin: 0 10px;
+    
+}
+
+.big-details-col > img {
+  height: 30px;
+  max-width: 30px;
+}
+
+
+.about-table tr{
+  display: flex;
+}
+
+
+// .about-table td{
+//   display: block;
 // }
+
+.about-table > th{
+  left: 0;
+  top: 0;
+}
+
+
+.about-details {
+  font-weight: bold;
+}
 

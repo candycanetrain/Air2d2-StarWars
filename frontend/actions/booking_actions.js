@@ -20,7 +20,8 @@ export const fetchBooking = (id) => dispatch => (
 
 export const createBooking = booking => dispatch => (
   BookingUtil.createBooking(booking)
-    .then(booking => dispatch(receiveBooking(booking)))
+    .then(booking => dispatch(receiveBooking(booking)),
+    err => dispatch(receiveBookingErrors(err.responseJSON)))
 );
 
 export const receiveBookings = (bookings) => ({

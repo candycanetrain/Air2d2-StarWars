@@ -15,10 +15,35 @@ class CurrentRoomShow extends React.Component {
   componentWillReceiveProps(newProps) {
     this.setState(newProps.room);
   }
+
   componentDidMount() {
     this.props.fetchRoom(this.props.roomId);
   }
+
+  renderGuests(max_party_size) {
+    if (max_party_size > 1) {
+      return( <span className="big-details-items">{max_party_size} Guests</span>);
+    } else {
+      return( <span className="big-details-items">{max_party_size} Guest</span>);
+    }
+  }
   
+
+  renderBedrooms(numOfBedrooms) {
+    if (numOfBedrooms > 1) {
+      return( <span className="big-details-items">{numOfBedrooms} Bedrooms</span>);
+    } else {
+      return( <span className="big-details-items">{numOfBedrooms} Bedroom</span>);
+    }
+  }
+
+  renderBeds(numOfBeds) {
+    if (numOfBeds > 1) {
+      return( <span className="big-details-items">{numOfBeds} Beds</span>);
+    } else {
+      return( <span className="big-details-items">{numOfBeds} Bed</span>);
+    }
+  }
 
   render() {
     const room = this.props.room
@@ -26,19 +51,59 @@ class CurrentRoomShow extends React.Component {
       <div className="show-page">
         <img className="show-img" src={room.img_url} alt=""/>
         <div className="show-details">
-          <ul className="current-room">
+          <div className="short-summary">
             
-            <li><label className="detail-labels" id="detail-name">Name: </label> {room.name}</li>
-            <li><label className="detail-labels" id="detail-city">City: </label> {room.city}</li>
-            <li><label className="detail-labels" id="detail-price">Price: </label> {room.price}</li>
-            <li><label className="detail-labels" id="detail-descripton">Description: </label> {room.description}</li>
-            <li><label className="detail-labels" id="details">Bedrooms: </label> {room.bedrooms}</li>
-            <li><label className="detail-labels" id="details">Beds: </label> {room.beds}</li>
-            <li><label className="detail-labels" id="details">Bathrooms: </label> {room.bathrooms}</li>
-            <li><label className="detail-labels" id="details">Home Type: </label> {room.homeType}</li>
-            <li><label className="detail-labels" id="details">Accommodates: </label> {room.accommodates}</li>
-            <li><label className="detail-labels" id="details">Amenities: </label> {room.amenities}</li>
-          </ul>
+            <span className="detail-name">{room.name}</span>
+            <span className="detail-city"><label>City: </label> {room.city}</span>
+            
+            <div className="big-details">
+              <div className="big-details-col">
+                <img src="http://res.cloudinary.com/candycanetrain/image/upload/v1490186128/home_r5atyr.png" alt=""/>
+                <span>{room.homeType}</span>             
+              </div>
+              <div className="big-details-col">
+                <img src="http://res.cloudinary.com/candycanetrain/image/upload/v1490186133/multiple-users-silhouette_knjpis.png" alt=""/>
+                {this.renderGuests(room.accommodates)}
+              </div>
+
+              <div className="big-details-col">
+                <img src="http://res.cloudinary.com/candycanetrain/image/upload/v1490186126/door_fjofuz.png" alt=""/>
+                {this.renderBedrooms(room.bedrooms)}
+              </div>
+
+              <div className="big-details-col">
+                <img src="http://res.cloudinary.com/candycanetrain/image/upload/v1490186124/bed_nzrgdr.png" alt=""/>
+                {this.renderBeds(room.beds)}
+              </div>
+            </div>
+          </div>
+
+          <div className="about">
+            <h4>About this Listing</h4>
+            
+            <table className="about-table">
+              <tr>
+                <th>This Space</th>
+                <td>Accommodates: <span className="about-details">{room.accommodates}</span></td>
+                <td>Bathrooms: <span className="about-details">{room.bathrooms}</span></td>
+                <td>Bedrooms: <span className="about-details">{room.bedrooms}</span></td>
+                <td>Beds: <span className="about-details">{room.beds}</span></td>
+              </tr>
+              <tr>
+                <th>Price</th>
+                <td>Extra people: <span className="about-details">{Number.parseInt(room.price*(0.2))}/ night for extra guests</span></td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td>{room.description}</td>
+              </tr>
+            </table>
+          </div>
+              
+         
+
+
+          
           <div className="reviews">
             <h3>Reviews</h3>
           </div>

@@ -13,12 +13,13 @@ const bookingReducer = (state = _nullErrors, action) => {
     case RECEIVE_BOOKING: 
       return merge({}, state, {[action.booking.id]: action.booking});
     case RECEIVE_BOOKING_ERRORS:
-      const errors = actions.errors;
+      const errors = action.errors;
       return merge({}, _nullErrors, {errors});
     default: 
       return state;    
   }
 };
+
 
 
 

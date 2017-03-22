@@ -1,7 +1,8 @@
 export const createBooking = (booking) => {
+  debugger
   return $.ajax({
     method: 'POST',
-    URL: `api/bookings/`,
+    url: 'api/bookings',
     data: {booking}
   });
 }
