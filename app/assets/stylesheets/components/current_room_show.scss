@@ -29,13 +29,17 @@
 }
 
 .big-details-col {
-    margin: 0 10px;
-    
+    margin: 10px auto;
+    display: flex;
+    vertical-align: middle;
+    flex-direction: column;
+    text-align: center;
 }
 
 .big-details-col > img {
   height: 30px;
   max-width: 30px;
+  margin: 0 auto;
 }
 
 

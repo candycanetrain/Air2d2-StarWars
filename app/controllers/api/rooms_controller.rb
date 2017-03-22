@@ -25,11 +25,13 @@ class Api::RoomsController < ApplicationController
       # end
       @rooms
     elsif city != nil
-      @rooms = Array.new();
-      all_rooms.each do |room|
-        @rooms.push(room) if room.city == city
-      end
-      @rooms
+        #Room.where("city LIKE ?", "%#{city}%")
+      
+      @rooms = Room.all.where("city LIKE ?", "%#{city}%")
+      # all_rooms.each do |room|
+      #   @rooms.push(room) if room.city == city
+      # end
+      # @rooms
     else
       @rooms = all_rooms
     end

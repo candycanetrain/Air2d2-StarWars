@@ -5,7 +5,7 @@ const roomsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type){
     case RECEIVE_ROOMS:
-      return merge({}, state, action.rooms);
+      return action.rooms;
     default: 
       return state;
   }
