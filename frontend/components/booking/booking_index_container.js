@@ -2,14 +2,8 @@ import { connect } from 'react-redux';
 import BookingIndex from './booking_index';
 import { fetchBookings, fetchBooking, deleteBooking } from '../../actions/booking_actions';
 
-const _initialState = {
-  bookings: {
-    bookings: [],
-    errors: []
-  }
-}
 
-const mapStateToProps = (state = _initialState) => {
+const mapStateToProps = (state) => {
   // debugger
   return {
     bookings: state.bookings.bookings,

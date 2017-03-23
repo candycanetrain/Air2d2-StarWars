@@ -1,21 +1,22 @@
 import { connect } from 'react-redux';
-import { createReview } from '../../actions/review_actions';
+import { createReview, fetchReviews } from '../../actions/review_actions';
 import Review from './review';
 
-const mapStateToProps = (state, {params}) => {
+const mapStateToProps = (state, ownProps) => {
+  // debugger
   const currentUser = state.session.currentUser;
   const room = state.currentRoom;
-  const errors = state.reviews.errors
-  // const party_size = 1;
+  const errors = state.reviews.errors;
   return {
-    currentUser,
-    room,
-    errors
+    reviews: state.reviews.reviews,
+    errors: state.reviews.errors,
+    room: state.currentRoom
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  createReview: booking => dispatch(createReview(booking))
+  createReview: booking => dispatch(createReview(booking)),
+  fetchReviews: id => dispatch(fetchReviews(id))
 });
 
 export default connect(

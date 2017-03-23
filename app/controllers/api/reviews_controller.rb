@@ -14,7 +14,14 @@ class Api::ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = current_user.reviews
+
+    if params[:room_id]
+      @reviews = Review.all.where("room_id = ?", params[:room_id])
+    elsif params[:user_id]
+      @reviews = Review.all.where("user_id = ?", params[:user_id])
+    else
+      render json: "No reviews right now", status: 200
+    end
   end
 
   def show
@@ -48,6 +55,17 @@ class Api::ReviewsController < ApplicationController
   private
   def review_params
     params.require(:review).permit(:user_id, :user, :room, :room_id, :body, :rating)
+  end
+
+  def room_id
+    review_params[:room_id];
+  end
+  def user_id
+    review_params[:user_id];
+  end
+
+  def rating
+    review_params[:rating];
   end
   
 end

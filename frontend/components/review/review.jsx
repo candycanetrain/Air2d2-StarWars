@@ -21,13 +21,13 @@ class Review extends React.Component {
     this.ratingChanged = this.ratingChanged.bind(this);
   }
 
-  componentWillReceiveProps(newProps) {
-    debugger
-    if (newProps.room){
-      this.setState(newProps.room);
+  // componentWillReceiveProps(newProps) {
+  //   // debugger
+  //   if (newProps.room){
+  //     this.setState(newProps.room);
       
-    }
-  }
+  //   }
+  // }
 
   ratingChanged(newRating) {
     console.log(newRating);
@@ -41,6 +41,8 @@ class Review extends React.Component {
 
 
   componentDidMount() {
+    debugger
+    this.props.fetchReviews({room_id: this.props.roomId})
   }
 
   // handleChangeStart(date) {
@@ -56,7 +58,7 @@ class Review extends React.Component {
   }
 
   handleReview(e) {
-    debugger
+    // debugger
     e.preventDefault();
     const currentUserId = this.props.currentUser.id;
     const currentRoomId = this.props.room.id;
@@ -75,7 +77,6 @@ class Review extends React.Component {
 
   renderErrors() {
     if (this.props.errors) {
-      debugger
       return(
       <ul>
         {this.props.errors.map((error,i) => (
@@ -99,8 +100,26 @@ class Review extends React.Component {
     console.log(this.state);
     console.log("THESE ARE PROPS: ")
     console.log(this.props);
+    if (this.props.reviews !== undefined){
+      const reviews = this.props.reviews;
+      
+      debugger
     return(
       <div className="review">
+        <h2>Reviews :</h2>
+
+        <ul className="reviews-show">
+          {reviews.map((review) => (
+            <li key={review.id}>
+              <span className="review-user">{review.user.name} says: </span>
+              <span className="review-body">{review.body}</span>
+            </li>
+
+          ))}
+        </ul>
+
+
+
         <h4 className="review-header">Leave a Review: </h4>
         {this.renderErrors}
         <form className="review-form" action="">
@@ -121,6 +140,13 @@ class Review extends React.Component {
         
       </div>
     );
+    } else {
+      return(
+          <div>
+          "There are no reviews"
+        </div>
+      );
+    }
   }
 
 }

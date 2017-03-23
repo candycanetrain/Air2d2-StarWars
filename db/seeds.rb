@@ -41,3 +41,9 @@ Booking.create(user_id: 3, room_id: 1, start_date: DateTime.new(2016, 4,2), end_
 
 Review.create(user_id: 1, room_id: 1, body: "What a wonderful place to stay", rating: 5)
 Review.create(user_id: 1, room_id: 2, body: "What an awful place to stay", rating: 5)
+Review.create(user_id: 1, room_id: 1, body: "What a wonderful place to stay", rating: 3)
+Review.create(user_id: 1, room_id: 1, body: "What an awful place to stay", rating: 2)
+Review.create(user_id: 1, room_id: 1, body: "What a wonderful place to stay", rating: 1)
+Review.create(user_id: 1, room_id: 2, body: "What an awful place to stay", rating: 3)
+Review.create(user_id: 1, room_id: 1, body: "What a wonderful place to stay", rating: 4)
+Review.create(user_id: 1, room_id: 1, body: "What an awful place to stay", rating: 5)

@@ -9,13 +9,19 @@ export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
 import {hashHistory} from 'react-router';
 
 
-export const fetchReviews = () => dispatch => {
+export const fetchReviews = (id) => dispatch => {
  return(
-  ReviewUtil.fetchReviews()
+  ReviewUtil.fetchReviews(id)
     .then(reviews => dispatch(receiveReviews(reviews)),
-    err => dispatch(receiveReviewErrors(err.responseJson)))    
+    err => dispatch(receiveReviewErrors(err.responseJson))) 
   );
 };
+
+
+
+
+
+
 
 export const fetchReview = (id) => dispatch => {
   return(

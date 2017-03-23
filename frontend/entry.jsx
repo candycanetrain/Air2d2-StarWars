@@ -15,6 +15,7 @@ window.fetchReview = fetchReview;
 window.fetchBookings = fetchBookings;
 window.fetchBooking = fetchBooking;
 
+
 const windowFunctions = {selectRoom};
 Object.assign(window, windowFunctions);
 

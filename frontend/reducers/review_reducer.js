@@ -9,14 +9,17 @@ const _initialState = Object.freeze({
 
 const reviewReducer = (state = _initialState, action) => {
   Object.freeze(state);
+  // debugger
   switch (action.type) {
     case RECEIVE_REVIEWS:
-      return merge({}, state, action.reviews);
+      return merge({}, state, {reviews: action.reviews});
     case RECEIVE_REVIEW: 
-      return merge({}, state, {[action.review.id]: action.review});
+      let newState =  merge({}, state, {[action.review.id]: action.review});
+      newState.errors = [];
+      return newState;
     case RECEIVE_REVIEW_ERRORS:
       const errors = action.errors;
-      return merge({}, _initialState, {errors});
+      return merge({}, _initialState, {errors: action.errors});
     default: 
       return state;    
   }

@@ -1,12 +1,12 @@
 import {merge} from 'lodash';
 import { DELETE_BOOKING, RECEIVE_BOOKINGS, RECEIVE_BOOKING, RECEIVE_BOOKING_ERRORS } from '../actions/booking_actions';
 
-const _nullErrors = Object.freeze({
+const _initialState = Object.freeze({
   bookings: [],
   errors: []
 });
 
-const bookingReducer = (state = _nullErrors, action) => {
+const bookingReducer = (state = _initialState, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_BOOKINGS:
@@ -21,7 +21,8 @@ const bookingReducer = (state = _nullErrors, action) => {
       anotherState.errors = action.errors;
       return anotherState;
     case DELETE_BOOKING:
-      return merge({}, state, {bookings: state.bookings.filter( booking => booking.id !== action.booking.id)});
+      let tempState = merge({}, _initialState, {bookings: state.bookings.filter( booking => booking.id !== action.booking.id)});
+      return merge({}, _initialState, {bookings: state.bookings.filter( booking => booking.id !== action.booking.id)});
     default: 
       return state;    
   }

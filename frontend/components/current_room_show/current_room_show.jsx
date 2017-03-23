@@ -107,7 +107,7 @@ class CurrentRoomShow extends React.Component {
           <div className="reviews">
             <h3>Reviews</h3>
           </div>
-        <ReviewContainer />
+        <ReviewContainer room={room} roomId={this.props.roomId}/>
         <BookingContainer currentRoom={room}/>
 
         
