@@ -50,8 +50,10 @@ class Review extends React.Component {
   // }
 
   updateBody(e) {
+    debugger
     e.preventDefault();
-    return e => this.setState({body: e.currentTarget.value});
+
+    this.setState({body: e.currentTarget.value});
   }
 
   handleReview(e) {
@@ -103,9 +105,7 @@ class Review extends React.Component {
         {this.renderErrors}
         <form className="review-form" action="">
             <label className="review-label" htmlFor="review-body"></label>
-            <textarea className="review-body" onChange={this.updateBody}>
-              {this.state.body}
-            </ textarea>
+            <textarea className="review-body" onChange={this.updateBody} value={this.state.body} />
             <ReactStars
               count={5}
               onChange={this.ratingChanged}

@@ -25,6 +25,11 @@ export const createBooking = booking => dispatch => (
     err => dispatch(receiveBookingErrors(err.responseJSON)))
 );
 
+export const deleteBooking = (id) => dispatch => (
+  BookingUtil.deleteBooking(id)
+    .then(booking => dispatch(receiveBooking(null)))
+);
+
 export const receiveBookings = (bookings) => ({
   type: RECEIVE_BOOKINGS,
   bookings
@@ -40,10 +45,8 @@ export const receiveBooking = (booking) =>  ({
 //   booking
 // }); 
 
-export const deleteBooking = (id) => ({
-   type: DELETE_BOOKING,
-   id
-});
+
+
 
 export const updateBooking = (booking) => ({
    type: UPDATE_BOOKING,

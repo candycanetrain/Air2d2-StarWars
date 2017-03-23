@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import BookingIndex from './booking_index';
-import { fetchBookings, fetchBooking } from '../../actions/booking_actions';
+import { fetchBookings, fetchBooking, deleteBooking } from '../../actions/booking_actions';
 
 const _initialState = {
   bookings: {
@@ -19,7 +19,9 @@ const mapStateToProps = (state = _initialState) => {
 
 const mapDispatchToProps = dispatch => ({
   fetchBooking: id => dispatch(fetchBooking(id)),
-  fetchBookings: () => dispatch(fetchBookings()) 
+  fetchBookings: () => dispatch(fetchBookings()),
+  deleteBooking: id => dispatch(deleteBooking(id))
+ 
   
 });
 

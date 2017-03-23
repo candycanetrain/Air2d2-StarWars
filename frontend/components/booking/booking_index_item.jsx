@@ -6,7 +6,12 @@ class BookingIndexItem extends React.Component {
     super(props);
   }
 
+  handleDelete(e) {
+    
+  }
+
   render() {
+    debugger
     const booking = this.props.booking
     return(
       <div className="booking-index-item">
@@ -16,6 +21,7 @@ class BookingIndexItem extends React.Component {
         <h4>Dates: </h4><span>{booking.start_date} - {booking.end_date}</span>
         <h4>Home Type: </h4><span>{booking.room.homeType}</span>
         <h4>Number of Guests: </h4><span>{booking.party_size}</span>
+        <button onClick={this.handleDelete.bind(this, booking.id)}>Delete Booking</button>
       </div>
     )
   }

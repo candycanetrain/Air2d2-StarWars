@@ -24,7 +24,6 @@ const mapStateToProps = (state, {params}) => {
 
 const mapDispatchToProps = dispatch => ({
   createBooking: booking => dispatch(createBooking(booking))
-  
 });
 
 export default connect(
