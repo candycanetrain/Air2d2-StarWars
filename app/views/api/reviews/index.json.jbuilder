@@ -1,0 +1,1 @@
+json.array! @rooms, :id, :user, :user_id, :room_id, :room, :body, :rating

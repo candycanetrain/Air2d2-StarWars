@@ -20,6 +20,11 @@ class Review extends React.Component {
 
   }
 
+  componentWillReceiveProps(newProps) {
+    // debugger
+    this.setState(newProps.room);
+  }
+
   ratingChanged(newRating) {
     this.setState({
       rating: newRating

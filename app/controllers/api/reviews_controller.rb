@@ -18,6 +18,12 @@ class Api::ReviewsController < ApplicationController
   end
 
   def show
+    @review = Review.find_by_id(review_params)
+    if @review
+      render 'api/reviews/show'
+    else
+      render( json: ["No reviews right now"], status:401)
+    end
   end
 
   def destroy

@@ -36,7 +36,7 @@ class Booking extends React.Component {
   handleChangeStart(date) {
     this.setState({
       startDate: date
-    });
+    })
   }
 
   handleChangeEnd(date) {
