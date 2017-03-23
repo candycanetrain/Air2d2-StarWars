@@ -47,7 +47,6 @@ class Booking extends React.Component {
 
   handleBook(e) {
     e.preventDefault();
-    debugger
     const currentUserId = this.props.currentUser.id;
     const currentRoomId = this.props.currentRoom.id;
     const startDate = this.state.startDate._d;

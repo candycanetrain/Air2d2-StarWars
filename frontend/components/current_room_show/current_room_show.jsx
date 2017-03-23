@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import RoomMap from '../room_map/room_map';
 import BookingContainer from '../booking/booking_container';
+import Review from '../review/review';
 
 // import RoomDetail from './room_detail';
 
@@ -99,18 +100,14 @@ class CurrentRoomShow extends React.Component {
               </tr>
             </table>
           </div>
-              
-         
-
-
-          
-          <div className="reviews">
-            <h3>Reviews</h3>
-          </div>
         </div>
           
         <br/>
-
+          <div className="reviews">
+            <h3>Reviews</h3>
+          </div>
+          <Review />
+        
         <BookingContainer currentRoom={room}/>
 
         

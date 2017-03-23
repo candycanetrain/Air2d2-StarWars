@@ -38,3 +38,6 @@ Booking.create(user_id: 3, room_id: 1, start_date: DateTime.new(2017, 3,26), end
 Booking.create(user_id: 3, room_id: 4, start_date: DateTime.new(2017, 3,28), end_date: DateTime.new(2017, 3, 29), party_size: 3);
 Booking.create(user_id: 3, room_id: 2, start_date: DateTime.new(2017, 3,30), end_date: DateTime.new(2017, 4, 1), party_size: 3);
 Booking.create(user_id: 3, room_id: 1, start_date: DateTime.new(2017, 4,2), end_date: DateTime.new(2017, 4, 3), party_size: 3);
+
+Review.create(user_id: 1, room_id: 1, body: "What a wonderful place to stay", rating: 5)
+Review.create(user_id: 1, room_id: 2, body: "What an awful place to stay", rating: 5)
