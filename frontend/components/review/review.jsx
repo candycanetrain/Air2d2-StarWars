@@ -21,13 +21,13 @@ class Review extends React.Component {
     this.ratingChanged = this.ratingChanged.bind(this);
   }
 
-  // componentWillReceiveProps(newProps) {
-  //   // debugger
-  //   if (newProps.room){
-  //     this.setState(newProps.room);
-      
-  //   }
-  // }
+  componentWillReceiveProps(newProps) {
+    if (this.props.reviews.length !== newProps.reviews.length) {
+      this.props.fetchReviews({room_id: this.props.roomId});
+    }
+  }
+
+
 
   ratingChanged(newRating) {
     console.log(newRating);
@@ -38,10 +38,9 @@ class Review extends React.Component {
   }
 
 
-
+  
 
   componentDidMount() {
-    debugger
     this.props.fetchReviews({room_id: this.props.roomId})
   }
 
@@ -58,10 +57,10 @@ class Review extends React.Component {
   }
 
   handleReview(e) {
-    // debugger
+    debugger
     e.preventDefault();
-    const currentUserId = this.props.currentUser.id;
-    const currentRoomId = this.props.room.id;
+    const currentUserId = this.props.currentUserId;
+    const currentRoomId = this.props.roomId;
     const body = this.state.body;
     const rating = this.state.rating;
     this.props.createReview({user_id: currentUserId, room_id: currentRoomId, body: body, rating: rating})
@@ -103,7 +102,6 @@ class Review extends React.Component {
     if (this.props.reviews !== undefined){
       const reviews = this.props.reviews;
       
-      debugger
     return(
       <div className="review">
         <h2>Reviews :</h2>

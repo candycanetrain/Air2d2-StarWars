@@ -36,7 +36,7 @@ export const createReview = review => dispatch => {
   return(
     ReviewUtil.createReview(review)
     .then(review => dispatch(receiveReview(review)),
-    err => dispatch(receiveReviewErrors(err.responseJSON))).then(hashHistory.push("/"))
+    err => dispatch(receiveReviewErrors(err.responseJSON)))
 )};
 
 export const receiveReviews = (reviews) => ({

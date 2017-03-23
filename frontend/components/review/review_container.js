@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     reviews: state.reviews.reviews,
     errors: state.reviews.errors,
-    room: state.currentRoom
+    room: state.currentRoom,
+    currentUserId: state.session.currentUser.id
   };
 };
 
