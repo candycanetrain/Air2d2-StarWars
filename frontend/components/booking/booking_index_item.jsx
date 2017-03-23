@@ -6,12 +6,14 @@ class BookingIndexItem extends React.Component {
     super(props);
   }
 
-  handleDelete(e) {
-    
+
+
+  handleDelete(id, e) {
+    e.preventDefault();
+    this.props.deleteBooking(id);
   }
 
   render() {
-    debugger
     const booking = this.props.booking
     return(
       <div className="booking-index-item">

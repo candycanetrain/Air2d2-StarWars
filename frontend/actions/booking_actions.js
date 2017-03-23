@@ -27,7 +27,7 @@ export const createBooking = booking => dispatch => (
 
 export const deleteBooking = (id) => dispatch => (
   BookingUtil.deleteBooking(id)
-    .then(booking => dispatch(receiveBooking(null)))
+    .then(booking => dispatch(removeBooking(booking)))
 );
 
 export const receiveBookings = (bookings) => ({
@@ -40,10 +40,16 @@ export const receiveBooking = (booking) =>  ({
   booking
 });
 
+export const removeBooking = (booking) => ({
+  type: DELETE_BOOKING,
+  booking
+});
+
 // export const createBooking = (booking) => ({
 //   type: CREATE_BOOKING,
 //   booking
 // }); 
+
 
 
 

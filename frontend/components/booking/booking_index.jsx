@@ -23,7 +23,7 @@ class BookingIndex extends React.Component {
           <ul>
             {bookings.map((booking) => (
             <li className="booking-item" key={booking.id}>
-                  <BookingIndexItem booking={booking} />
+                  <BookingIndexItem booking={booking} deleteBooking={this.props.deleteBooking} />
             </li>
             ))}
           </ul>

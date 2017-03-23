@@ -10,7 +10,7 @@ class Review extends React.Component {
     super(props);
     this.state = {
       rating: 1,
-      body: "Leave review here"
+      body: ""
     };
   
     // this.handleChangeStart = this.handleChangeStart.bind(this);
@@ -50,7 +50,6 @@ class Review extends React.Component {
   // }
 
   updateBody(e) {
-    debugger
     e.preventDefault();
 
     this.setState({body: e.currentTarget.value});
@@ -105,7 +104,7 @@ class Review extends React.Component {
         {this.renderErrors}
         <form className="review-form" action="">
             <label className="review-label" htmlFor="review-body"></label>
-            <textarea className="review-body" onChange={this.updateBody} value={this.state.body} />
+            <textarea className="review-body" placeholder="Write a review here!" onChange={this.updateBody} value={this.state.body} />
             <ReactStars
               count={5}
               onChange={this.ratingChanged}
