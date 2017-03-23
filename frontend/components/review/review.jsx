@@ -9,36 +9,39 @@ class Review extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rating: undefined,
-      body: ""
+      rating: 1,
+      body: "Leave review here"
     };
   
     // this.handleChangeStart = this.handleChangeStart.bind(this);
     // this.handleChangeEnd = this.handleChangeEnd.bind(this);
     this.handleReview = this.handleReview.bind(this);
     // this.handlePartySize = this.handlePartySize.bind(this);
-
+    this.updateBody = this.updateBody.bind(this);
+    this.ratingChanged = this.ratingChanged.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
-    // debugger
-    this.setState(newProps.room);
+    debugger
+    if (newProps.room){
+      this.setState(newProps.room);
+      
+    }
   }
 
   ratingChanged(newRating) {
+    console.log(newRating);
+    console.log(this);
     this.setState({
       rating: newRating
     });
   }
 
 
-  // componentWillReceiveProps(newProps) {
-  //   // debugger
-  //   this.setState(newProps.room);
-  // }
 
-  // componentDidMount() {
-  // }
+
+  componentDidMount() {
+  }
 
   // handleChangeStart(date) {
   //   this.setState({
@@ -46,15 +49,13 @@ class Review extends React.Component {
   //   });
   // }
 
-  updateBody(newBody) {
-    this.setState({
-      body: newBody
-    });
+  updateBody(e) {
+    e.preventDefault();
+    return e => this.setState({body: e.currentTarget.value});
   }
 
   handleReview(e) {
     e.preventDefault();
-    debugger
     const currentUserId = this.props.currentUser.id;
     const currentRoomId = this.props.currentRoom.id;
     const body = this.state.body;
@@ -71,7 +72,9 @@ class Review extends React.Component {
   // }
 
   renderErrors() {
-    return(
+    if (this.props.errors) {
+      debugger
+      return(
       <ul>
         {this.props.errors.map((error,i) => (
           <li key={`errors-${i} `}>
@@ -80,6 +83,8 @@ class Review extends React.Component {
         ))}
       </ul>
     );
+    }
+    
   }
 
   // {this.renderErrors()}
@@ -88,14 +93,19 @@ class Review extends React.Component {
   
 
   render() {
+    console.log("THESE IS STATE: ")
     console.log(this.state);
+    console.log("THESE ARE PROPS: ")
+    console.log(this.props);
     return(
       <div className="review">
         <h4 className="review-header">Leave a Review: </h4>
         {this.renderErrors}
         <form className="review-form" action="">
             <label className="review-label" htmlFor="review-body"></label>
-            <input className="review-body" type="text" onChange={this.updateBody} value={this.state.body}/>
+            <textarea className="review-body" onChange={this.updateBody}>
+              {this.state.body}
+            </ textarea>
             <ReactStars
               count={5}
               onChange={this.ratingChanged}
@@ -105,6 +115,7 @@ class Review extends React.Component {
           
         </form>
         <button onClick={this.handleReview}> Submit Review</button>
+              {this.renderErrors}
         
 
         

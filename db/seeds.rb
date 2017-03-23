@@ -29,15 +29,15 @@ Room.create(name: "Mos Eisley Home", city: "Tatooine", price: "4242.89", lat: 37
 Room.create(name: "Carbon Freeze Chamber", city: "Bespin", price: "4242.89", lat: 37.357714, lng: -121.920776, description: "A perfect place to get away from the summer heat or pass the time.", bedrooms: 1, beds: 0, bathrooms: 0, homeType: "chamber", img_url: "http://res.cloudinary.com/candycanetrain/image/upload/v1490091969/Carbon-freeze_chamber_SWB_f93zh0.png", accommodates: 1);
 
 
-Booking.create(user_id: 1, room_id: 1, start_date: DateTime.new(2017, 3,20), end_date: DateTime.new(2017, 3, 25), party_size: 2);
-Booking.create(user_id: 1, room_id: 2, start_date: DateTime.new(2017, 3,26), end_date: DateTime.new(2017, 3, 28), party_size: 2);
-Booking.create(user_id: 1, room_id: 3, start_date: DateTime.new(2017, 3,30), end_date: DateTime.new(2017, 4, 5), party_size: 2);
-Booking.create(user_id: 1, room_id: 4, start_date: DateTime.new(2017, 4,8), end_date: DateTime.new(2017, 4, 20), party_size: 2);
+Booking.create(user_id: 1, room_id: 1, start_date: DateTime.new(2016, 3,20), end_date: DateTime.new(2016, 3, 25), party_size: 2);
+Booking.create(user_id: 1, room_id: 2, start_date: DateTime.new(2016, 3,26), end_date: DateTime.new(2016, 3, 28), party_size: 2);
+Booking.create(user_id: 1, room_id: 3, start_date: DateTime.new(2016, 3,30), end_date: DateTime.new(2016, 4, 5), party_size: 2);
+Booking.create(user_id: 1, room_id: 4, start_date: DateTime.new(2016, 4,8), end_date: DateTime.new(2016, 4, 20), party_size: 2);
 
-Booking.create(user_id: 3, room_id: 1, start_date: DateTime.new(2017, 3,26), end_date: DateTime.new(2017, 3, 27), party_size: 3);
-Booking.create(user_id: 3, room_id: 4, start_date: DateTime.new(2017, 3,28), end_date: DateTime.new(2017, 3, 29), party_size: 3);
-Booking.create(user_id: 3, room_id: 2, start_date: DateTime.new(2017, 3,30), end_date: DateTime.new(2017, 4, 1), party_size: 3);
-Booking.create(user_id: 3, room_id: 1, start_date: DateTime.new(2017, 4,2), end_date: DateTime.new(2017, 4, 3), party_size: 3);
+Booking.create(user_id: 3, room_id: 1, start_date: DateTime.new(2016, 3,26), end_date: DateTime.new(2016, 3, 27), party_size: 3);
+Booking.create(user_id: 3, room_id: 4, start_date: DateTime.new(2016, 3,28), end_date: DateTime.new(2016, 3, 29), party_size: 3);
+Booking.create(user_id: 3, room_id: 2, start_date: DateTime.new(2016, 3,30), end_date: DateTime.new(2016, 4, 1), party_size: 3);
+Booking.create(user_id: 3, room_id: 1, start_date: DateTime.new(2016, 4,2), end_date: DateTime.new(2016, 4, 3), party_size: 3);
 
 Review.create(user_id: 1, room_id: 1, body: "What a wonderful place to stay", rating: 5)
 Review.create(user_id: 1, room_id: 2, body: "What an awful place to stay", rating: 5)

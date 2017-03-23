@@ -53,6 +53,7 @@ class Booking extends React.Component {
     const endDate = this.state.endDate._d;
     const party_size = this.state.party_size;
     this.props.createBooking({user_id: currentUserId, room_id: currentRoomId, start_date: startDate, end_date: endDate, party_size: party_size })
+      .then(() => hashHistory.push("/bookings"));
     
   }
 
@@ -64,6 +65,7 @@ class Booking extends React.Component {
   }
 
   renderErrors() {
+    // debugger
     return(
       <ul>
         {this.props.errors.map((error,i) => (

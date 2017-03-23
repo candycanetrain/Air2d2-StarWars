@@ -12,19 +12,25 @@ import {hashHistory} from 'react-router';
 export const fetchReviews = () => dispatch => {
  return(
   ReviewUtil.fetchReviews()
-    .then(reviews => dispatch(receiveReviews(reviews)))
-)};
+    .then(reviews => dispatch(receiveReviews(reviews)),
+    err => dispatch(receiveReviewErrors(err.responseJson)))    
+  );
+};
 
-export const fetchReview = (id) => dispatch => (
-  ReviewUtil.fetchReview(id)
-    .then(review => dispatch(receiveReview(review)))
-);
+export const fetchReview = (id) => dispatch => {
+  return(
+    ReviewUtil.fetchReview(id)
+    .then(review => dispatch(receiveReview(review)),
+    err => dispatch(receiveReviewErrors(err.responseJSON)))
+  );
+};
 
-export const createReview = review => dispatch => (
-  ReviewUtil.createReview(review)
+export const createReview = review => dispatch => {
+  return(
+    ReviewUtil.createReview(review)
     .then(review => dispatch(receiveReview(review)),
     err => dispatch(receiveReviewErrors(err.responseJSON))).then(hashHistory.push("/"))
-);
+)};
 
 export const receiveReviews = (reviews) => ({
   type: RECEIVE_REVIEWS,
@@ -34,21 +40,6 @@ export const receiveReviews = (reviews) => ({
 export const receiveReview = (review) =>  ({
   type: RECEIVE_REVIEW,
   review
-});
-
-// export const createReview = (review) => ({
-//   type: CREATE_REVIEW,
-//   review
-// }); 
-
-export const deleteReview = (id) => ({
-   type: DELETE_REVIEW,
-   id
-});
-
-export const updateReview = (review) => ({
-   type: UPDATE_REVIEW,
-   review
 });
 
 export const receiveReviewErrors = errors => ({

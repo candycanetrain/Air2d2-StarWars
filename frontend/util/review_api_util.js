@@ -1,5 +1,4 @@
 export const createReview = (review) => {
-  debugger
   return $.ajax({
     method: 'POST',
     url: 'api/reviews',
@@ -7,31 +6,32 @@ export const createReview = (review) => {
   });
 }
 
-export const fetchReviews = () => {
-  return $.ajax({
+export const fetchReviews = () => (
+  $.ajax({
     method: 'GET',
-    url: 'api/reviews',
-  });
-}
+    url: 'api/reviews'
+  })
+);
 
-export const fetchReview = id => {
-  return $.ajax({
+export const fetchReview = id => (
+ $.ajax({
     method: 'GET',
     url: `api/reviews/${id}`
-  });
-}
+  })
+);
 
-export const updateReview = (review) => {
-  $.ajax({
+export const updateReview = review => {
+  return( $.ajax({
     method: 'PATCH',
     url: `/api/reviews/${review.id}`,
     data: {review}
-  });
+  }));
 };
 
 export const deleteReview = id => {
-  $.ajax({
+  return(
+    $.ajax({
     method: 'DELETE',
     url: `/api/reviews/${id}`
-  });
+  }));
 };

@@ -2,6 +2,7 @@ import {merge} from 'lodash';
 import { RECEIVE_REVIEWS, RECEIVE_REVIEW, RECEIVE_REVIEW_ERRORS } from '../actions/review_actions';
 
 const _nullErrors = Object.freeze({
+  //should i have another object to hold "reviews"? reviews: ??
   errors: []
 });
 

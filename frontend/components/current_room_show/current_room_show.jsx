@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router';
 import RoomMap from '../room_map/room_map';
 import BookingContainer from '../booking/booking_container';
-import Review from '../review/review';
+import ReviewContainer from '../review/review_container';
 
 // import RoomDetail from './room_detail';
-
+// <ReviewContainer currentRoom={room} currentUser={currentUser}/>
+//
 
 class CurrentRoomShow extends React.Component {
   constructor(props) {
@@ -106,7 +107,6 @@ class CurrentRoomShow extends React.Component {
           <div className="reviews">
             <h3>Reviews</h3>
           </div>
-          <Review />
         
         <BookingContainer currentRoom={room}/>
 
