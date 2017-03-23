@@ -26,6 +26,7 @@ export const fetchReview = (id) => dispatch => {
 };
 
 export const createReview = review => dispatch => {
+  debugger
   return(
     ReviewUtil.createReview(review)
     .then(review => dispatch(receiveReview(review)),

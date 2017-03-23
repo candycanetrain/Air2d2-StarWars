@@ -3,7 +3,6 @@ import { createReview } from '../../actions/review_actions';
 import Review from './review';
 
 const mapStateToProps = (state, {params}) => {
-  debugger
   const currentUser = state.session.currentUser;
   const room = state.currentRoom;
   const errors = state.reviews.errors
