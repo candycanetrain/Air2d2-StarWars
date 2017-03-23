@@ -22,7 +22,7 @@ export const fetchBooking = (id) => dispatch => (
 export const createBooking = booking => dispatch => (
   BookingUtil.createBooking(booking)
     .then(booking => dispatch(receiveBooking(booking)),
-    err => dispatch(receiveBookingErrors(err.responseJSON))).then(hashHistory.push("/"))
+    err => dispatch(receiveBookingErrors(err.responseJSON))).then(hashHistory.push("/bookings"))
 );
 
 export const receiveBookings = (bookings) => ({
