@@ -53,8 +53,8 @@ class Review extends React.Component {
     const currentRoomId = this.props.roomId;
     const body = this.state.body;
     const rating = this.state.rating;
+    this.setState({body: "", rating: 1});    
     this.props.createReview({user_id: currentUserId, room_id: currentRoomId, body: body, rating: rating})
-    this.setState({body: ""});
   }
 
   renderErrors() {
@@ -86,7 +86,7 @@ class Review extends React.Component {
         <ul className="reviews-show">
           {reviews.map((review) => (
             <li key={review.id}>
-              <span className="review-user">{review.user.name} says: </span>
+              <span className="review-user">{review.user.name} gave {review.rating} stars and says: </span>
               <span className="review-body">{review.body}</span>
             </li>
 
