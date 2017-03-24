@@ -104,12 +104,15 @@ class Search extends React.Component {
                 <option value="12">12 guests</option>
               </select>  
             </li>
+            <li>  
+              <button type="submit" onClick={this.handleForm} className="search-button">
+                <i className="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </li>
           </ul>
           
         </form>
-        <button type="submit" onClick={this.handleForm} className="search-button">
-            <i className="fa fa-search" aria-hidden="true"></i>
-        </button>
+    
         
       </div>
     );
