@@ -2,11 +2,11 @@
   display: flex;
   text-align: center;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   position: relative;
   background-size: cover;
   width: 100%;
-  height: 460px; 
+  height: 364.76px; 
   min-width: 300px;
   color: $white;
 }
@@ -14,6 +14,7 @@
 #home-welcome {
   font-size: 47px;
   text-shadow: 3px 4px $shadow;
+  margin-top: 120px;
 }
 
 #home-subtitle {
@@ -39,7 +40,7 @@
 }
 
 #home-video {
-  width: 100%;
+  height: 100%;
 }
 // #media (max-width: 1089px) {
 //       #welcome-video {

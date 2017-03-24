@@ -4,9 +4,19 @@
   width: 100%;
 }
 
+.show-details {
+  display: block;
+  margin: 0 10%;
+  width: 600px;
+}
+
 .short-summary {
   border: 1px solid $gray;
-
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  width: 500px;
 }
 .detail-name {
   font-size: 24px;
@@ -20,11 +30,13 @@
   font-weight: normal;
   left: 0;
   display: block;
+  margin-bottom: 20px;
 }
 
 .big-details {
   display: flex;
   justify-content: space-between;
+  
   
 }
 
@@ -36,15 +48,32 @@
     text-align: center;
 }
 
+
 .big-details-col > img {
   height: 30px;
   max-width: 30px;
   margin: 0 auto;
 }
 
+.about {
+  display: block;
+  margin-bottom: 20px; 
+      padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px; 
+}
+
+.about tbody{
+    display: table-row-group;
+    vertical-align: inherit;
+    border-color: inherit;
+
+
+}
 
 .about-table tr{
-  display: flex;
+  display: block;
+  
 }
 
 
@@ -52,13 +81,148 @@
 //   display: block;
 // }
 
-.about-table > th{
+.about-table th{
   left: 0;
   top: 0;
+  // width: 300px;
+  margin-right: 30px;
+  min-width: 80px;
+  text-align: left;
+  
 }
 
 
 .about-details {
   font-weight: bold;
 }
+
+.review {
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+      padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.review h3 {
+  font-size: 20px;
+}
+
+.booking-h3 {
+  font-size: 20px;
+        padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.reviews-show li {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.review-user {
+  width: 200px;
+}
+
+.review-body {
+  width: 400px;
+}
+
+
+.review-header {
+  font-size: 18px;
+}
+
+
+
+
+.review-body-textarea {
+  height: 200px;
+  width: 560px;
+  border: 1px solid $light-gray;
+}
+
+.ReactStars {
+  margin-left: 10px;
+  display: block;
+}
+
+.review-button {
+  font-size: 14px;
+  background-color: $lighter-than-logo;
+  margin-top: 1%;
+  position: inherit;
+  right: 0;
+  margin-right: 20px;
+}
+
+.booking {
+  width: 300px;
+  border: 1px solid $gray;
+  margin-top: 10%;
+     padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: $lighter-than-logo;
+  color: $white;
+}
+
+.booking-header-item-price {
+  font-size: 18px;  
+  font-weight: bold;
+}
+.booking-header-item-per-night {
+  font-size: 14px;  
+}
+.panel1 {
+  display: flex;
+  padding: 12px;
+
+}
+.panel-label {
+  color: $gray;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.booking-date-picker {
+  border: 1px solid $light-gray;
+  margin-right: 5px;
+  width: 100px;
+}
+
+.booking-button {
+  background-color: $lighter-than-logo;
+  padding: 0;
+  font-size: 14px;
+  width: inherit;
+  margin-bottom: 5px;
+}
+
+.panel2 {
+  display: flex;
+  padding: 12px;
+}
+
+#label-guests {
+  display: block;
+}
+
+.top-part {
+
+}
+
+
 

@@ -85,7 +85,7 @@ class Booking extends React.Component {
         <div className="booking-header">
           <div className="booking-header-item">
             <span className="booking-header-item-price">
-              {this.props.room.price}
+              {this.props.room.price} Credits
             </span>
           </div>
          
@@ -107,6 +107,7 @@ class Booking extends React.Component {
                   <div className="panel1-item">
                     <label className="panel-label" htmlFor="">Check In</label>
                     <DatePicker
+                      className="booking-date-picker"
                       selected={this.state.startDate}
                       selectsStart  startDate={this.state.startDate}
                       endDate={this.state.endDate}
@@ -117,6 +118,7 @@ class Booking extends React.Component {
                   <div className="panel1-item">
                     <label className="panel-label" htmlFor="">Check Out</label>
                     <DatePicker
+                      className="booking-date-picker"
                       selected={this.state.endDate}
                       selectsEnd  startDate={this.state.startDate}
                       endDate={this.state.endDate}
@@ -129,7 +131,7 @@ class Booking extends React.Component {
 
                 <div className="panel2">
                   <div className="panel2-item">
-                    <label className="panel-label" htmlFor="">Guests</label>
+                    <label className="panel-label" id="label-guests" htmlFor="">Guests</label>
                     <select className="panel-guests" name="guests" id="panel-guests" placeholder="1 guest" onChange={this.handlePartySize}>  
                       <option value="1">1 guest</option>
                       <option value="2">2 guests</option>
@@ -152,7 +154,7 @@ class Booking extends React.Component {
             </div>
           </div>  
         </form>
-        <button onClick={this.handleBook}>Book</button>
+        <button className="booking-button" onClick={this.handleBook}>Book</button>
       </div>
     );
   }

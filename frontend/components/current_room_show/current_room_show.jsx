@@ -84,8 +84,9 @@ class CurrentRoomShow extends React.Component {
             <h4>About this Listing</h4>
             
             <table className="about-table">
+              <tbody>
               <tr>
-                <th>This Space</th>
+                <th>This Space </th>
                 <td>Accommodates: <span className="about-details">{room.accommodates}</span></td>
                 <td>Bathrooms: <span className="about-details">{room.bathrooms}</span></td>
                 <td>Bedrooms: <span className="about-details">{room.bedrooms}</span></td>
@@ -93,24 +94,22 @@ class CurrentRoomShow extends React.Component {
               </tr>
               <tr>
                 <th>Price</th>
-                <td>Extra people: <span className="about-details">{Number.parseInt(room.price*(0.2))}/ night for extra guests</span></td>
+                <td>Extra people: <div className="about-details">{Number.parseInt(room.price*(0.2))}/ night for extra guests</div></td>
               </tr>
               <tr>
                 <th>Description</th>
                 <td>{room.description}</td>
               </tr>
+              </tbody>
             </table>
           </div>
-        </div>
-          
-        <br/>
-          <div className="reviews">
-            <h3>Reviews</h3>
-          </div>
-        <ReviewContainer room={room} roomId={this.props.roomId}/>
-        <BookingContainer currentRoom={room}/>
 
-        
+            <ReviewContainer room={room} roomId={this.props.roomId}/>
+            <h3 className="booking-h3">Book this room</h3>
+
+            <BookingContainer currentRoom={room}/>
+            
+        </div>
       </div>
     );
   }

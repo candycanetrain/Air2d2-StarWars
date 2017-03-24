@@ -12,6 +12,7 @@
   // opacity: 0.8;
   justify-content: center;
   bottom: 0;  
+  margin-top: 40px;
 }
 
 .search-form1 {
@@ -75,6 +76,10 @@
 
 }
 
+.li-button {
+  width: 30x;
+}
+
 // .search-fields {
 //   height: 10px;
 // }
@@ -109,3 +114,11 @@
   vertical-align: middle;
 }
 
+.li-button {
+  align-items: center;
+}
+
+.li-button i {
+  width: 50px;
+  height: 63px;
+}

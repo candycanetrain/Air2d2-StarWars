@@ -9,7 +9,7 @@ class Review extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rating: 1,
+      rating: 0,
       body: ""
     };
   
@@ -53,7 +53,7 @@ class Review extends React.Component {
     const currentRoomId = this.props.roomId;
     const body = this.state.body;
     const rating = this.state.rating;
-    this.setState({body: "", rating: 1});    
+    this.setState({body: "", rating: 0});    
     this.props.createReview({user_id: currentUserId, room_id: currentRoomId, body: body, rating: rating})
   }
 
@@ -81,14 +81,15 @@ class Review extends React.Component {
       
     return(
       <div className="review">
-        <h2>Reviews :</h2>
+        <h3>Reviews</h3>
 
         <ul className="reviews-show">
           {reviews.map((review) => (
             <li key={review.id}>
-              <span className="review-user">{review.user.name} gave {review.rating} stars and says: </span>
-              <span className="review-body">{review.body}</span>
+              <div className="review-user">{review.user.name}: {review.rating} stars</div>
+              <div className="review-body">{review.body}</div>
             </li>
+            
 
           ))}
         </ul>
@@ -99,18 +100,20 @@ class Review extends React.Component {
         {this.renderErrors}
         <form className="review-form" action="">
             <label className="review-label" htmlFor="review-body"></label>
-            <textarea className="review-body" placeholder="Write a review here!" onChange={this.updateBody} value={this.state.body}>
-            </textarea>
-            
             <ReactStars
               count={5}
               onChange={this.ratingChanged}
               size={24}
               color2={'#ffd700'} 
-              half={false}/>
+              half={false}
+              value={this.state.rating}/>
+            <textarea className="review-body-textarea" placeholder="Write a review here!" onChange={this.updateBody} value={this.state.body}>
+            </textarea>
+            
+            
           
         </form>
-        <button onClick={this.handleReview}> Submit Review</button>
+        <button className="review-button" onClick={this.handleReview}> Submit Review</button>
               {this.renderErrors}
         
 
