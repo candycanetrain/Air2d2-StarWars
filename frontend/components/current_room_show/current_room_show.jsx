@@ -48,7 +48,6 @@ class CurrentRoomShow extends React.Component {
   }
 
   render() {
-    debugger
     const room = this.props.room
     
     return(
