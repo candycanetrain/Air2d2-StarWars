@@ -33,6 +33,10 @@ Booking.create(user_id: 1, room_id: 1, start_date: DateTime.new(2016, 3,20), end
 Booking.create(user_id: 1, room_id: 2, start_date: DateTime.new(2016, 3,26), end_date: DateTime.new(2016, 3, 28), party_size: 2);
 Booking.create(user_id: 1, room_id: 3, start_date: DateTime.new(2016, 3,30), end_date: DateTime.new(2016, 4, 5), party_size: 2);
 Booking.create(user_id: 1, room_id: 4, start_date: DateTime.new(2016, 4,8), end_date: DateTime.new(2016, 4, 20), party_size: 2);
+Booking.create(user_id: 1, room_id: 5, start_date: DateTime.new(2016, 3,20), end_date: DateTime.new(2016, 3, 25), party_size: 2);
+Booking.create(user_id: 1, room_id: 6, start_date: DateTime.new(2016, 3,26), end_date: DateTime.new(2016, 3, 28), party_size: 2);
+Booking.create(user_id: 1, room_id: 7, start_date: DateTime.new(2016, 3,30), end_date: DateTime.new(2016, 4, 5), party_size: 2);
+Booking.create(user_id: 1, room_id: 8, start_date: DateTime.new(2016, 4,8), end_date: DateTime.new(2016, 4, 20), party_size: 2);
 
 Booking.create(user_id: 3, room_id: 1, start_date: DateTime.new(2016, 3,26), end_date: DateTime.new(2016, 3, 27), party_size: 3);
 Booking.create(user_id: 3, room_id: 4, start_date: DateTime.new(2016, 3,28), end_date: DateTime.new(2016, 3, 29), party_size: 3);
