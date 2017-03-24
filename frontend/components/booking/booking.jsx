@@ -79,7 +79,6 @@ class Booking extends React.Component {
   
 
   render() {
-    console.log(this.state);
     return(
       <div className="booking">
         <div className="booking-header">

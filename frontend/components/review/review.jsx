@@ -74,8 +74,6 @@ class Review extends React.Component {
 
 
   render() {
-    console.log("THESE ARE PROPS: ")
-    console.log(this.props);
     if (this.props.reviews !== undefined){
       const reviews = this.props.reviews;
       
