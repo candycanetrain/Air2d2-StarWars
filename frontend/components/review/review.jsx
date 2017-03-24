@@ -30,25 +30,16 @@ class Review extends React.Component {
 
 
   ratingChanged(newRating) {
-    console.log(newRating);
-    console.log(this);
     this.setState({
       rating: newRating
     });
   }
 
 
-  
-
   componentDidMount() {
     this.props.fetchReviews({room_id: this.props.roomId})
   }
 
-  // handleChangeStart(date) {
-  //   this.setState({
-  //     startDate: date
-  //   });
-  // }
 
   updateBody(e) {
     e.preventDefault();
@@ -57,22 +48,14 @@ class Review extends React.Component {
   }
 
   handleReview(e) {
-    debugger
     e.preventDefault();
     const currentUserId = this.props.currentUserId;
     const currentRoomId = this.props.roomId;
     const body = this.state.body;
     const rating = this.state.rating;
     this.props.createReview({user_id: currentUserId, room_id: currentRoomId, body: body, rating: rating})
-    
+    this.setState({body: ""});
   }
-
-  // handlePartySize(e) {
-  //   e.preventDefault();
-  //   this.setState({
-  //     party_size: e.target.value
-  //   });
-  // }
 
   renderErrors() {
     if (this.props.errors) {
@@ -89,14 +72,8 @@ class Review extends React.Component {
     
   }
 
-  // {this.renderErrors()}
-
-  
-  
 
   render() {
-    console.log("THESE IS STATE: ")
-    console.log(this.state);
     console.log("THESE ARE PROPS: ")
     console.log(this.props);
     if (this.props.reviews !== undefined){
@@ -122,7 +99,9 @@ class Review extends React.Component {
         {this.renderErrors}
         <form className="review-form" action="">
             <label className="review-label" htmlFor="review-body"></label>
-            <textarea className="review-body" placeholder="Write a review here!" onChange={this.updateBody} value={this.state.body} />
+            <textarea className="review-body" placeholder="Write a review here!" onChange={this.updateBody} value={this.state.body}>
+            </textarea>
+            
             <ReactStars
               count={5}
               onChange={this.ratingChanged}
@@ -140,7 +119,7 @@ class Review extends React.Component {
     );
     } else {
       return(
-          <div>
+         <div>
           "There are no reviews"
         </div>
       );

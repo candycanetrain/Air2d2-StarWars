@@ -17,12 +17,6 @@ export const fetchReviews = (id) => dispatch => {
   );
 };
 
-
-
-
-
-
-
 export const fetchReview = (id) => dispatch => {
   return(
     ReviewUtil.fetchReview(id)

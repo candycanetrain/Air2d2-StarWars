@@ -14,8 +14,8 @@ const reviewReducer = (state = _initialState, action) => {
     case RECEIVE_REVIEWS:
       return merge({}, state, {reviews: action.reviews});
     case RECEIVE_REVIEW: 
-      let newState =  merge({}, state, {[action.review.id]: action.review});
-      newState.errors = [];
+      let newState =  merge({}, state);
+      newState.reviews[action.review.id] = action.review;
       return newState;
     case RECEIVE_REVIEW_ERRORS:
       const errors = action.errors;
