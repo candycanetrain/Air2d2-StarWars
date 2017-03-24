@@ -48,7 +48,9 @@ class CurrentRoomShow extends React.Component {
   }
 
   render() {
+    debugger
     const room = this.props.room
+    
     return(
       <div className="show-page">
         <img className="show-img" src={room.img_url} alt=""/>

@@ -8,6 +8,7 @@ class RoomIndexItem extends React.Component {
   }
 
   handleClick() {
+    debugger
     const roomId = this.props.room.id;
     this.props.router.push(`rooms/${roomId}`);
   }

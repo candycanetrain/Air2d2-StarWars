@@ -52,11 +52,16 @@
   font-size: 16px;
   background-color: $salmon;
   color: $white;
-  padding: 20px 27px;
+  // padding: 20px 27px;
   justify-content: center;
   font-weight: none;
   margin-bottom: 15px;
 }
+.submit-button input{
+  padding: 20px 100%;
+  
+}
+
 
 
 

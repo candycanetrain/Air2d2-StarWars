@@ -49,12 +49,12 @@ class Review extends React.Component {
 
   handleReview(e) {
     e.preventDefault();
-    const currentUserId = this.props.currentUserId;
+    const currentUser = this.props.currentUser;
     const currentRoomId = this.props.roomId;
     const body = this.state.body;
     const rating = this.state.rating;
     this.setState({body: "", rating: 0});    
-    this.props.createReview({user_id: currentUserId, room_id: currentRoomId, body: body, rating: rating})
+    this.props.createReview({user_id: currentUser.id, room_id: currentRoomId, body: body, rating: rating})
   }
 
   renderErrors() {
