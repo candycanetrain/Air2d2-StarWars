@@ -1,0 +1,41 @@
+
+
+.booking-index-item {
+ display: flex;
+flex-direction: row;
+// justify-content: space-around;
+margin: 30px auto;
+width: 800px;
+}
+
+.booking-index-item img {
+  width: auto;
+  height: 200px;
+  margin-left: 30px;
+
+ 
+}
+
+.booking-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  
+}
+
+.booking-details h3, h4 {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.delete-booking-button {
+  background-color: $lighter-than-logo;
+
+}
+
+.booking-info-details {
+  display: inline;
+  margin-right: 10px;
+  
+}
