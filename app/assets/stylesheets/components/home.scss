@@ -11,6 +11,16 @@
   color: $white;
 }
 
+#home-welcome {
+  font-size: 47px;
+  text-shadow: 3px 4px $shadow;
+}
+
+#home-subtitle {
+  text-shadow: 3px 4px $shadow;
+  font-size: 15px;
+}
+
 .video-div {
   position:absolute;
   height: 100%;
@@ -28,6 +38,9 @@
   z-index: 0;
 }
 
+#home-video {
+  width: 100%;
+}
 // #media (max-width: 1089px) {
 //       #welcome-video {
 //         height:100%;

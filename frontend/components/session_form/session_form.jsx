@@ -95,7 +95,7 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-			<div>
+			<div className="session-form-whole-group">
         <nav className="login-signup">
           <button className="nav-button" onClick={this.openModal.bind(this, 'signup')}>Sign up</button>
 					<button className="nav-button" onClick={this.openModal.bind(this, 'login')}>Login</button>

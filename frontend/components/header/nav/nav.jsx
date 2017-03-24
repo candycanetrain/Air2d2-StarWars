@@ -25,7 +25,7 @@ class Nav extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="nav-whole-group">
         {this.props.currentUser ? this.personalGreeting(this.props.currentUser, this.props.logout) : this.sessionLinks()}
       </div>
     );

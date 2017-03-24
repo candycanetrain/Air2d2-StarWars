@@ -6,7 +6,7 @@ import Search from './search/search';
 import Home from './home';
 
 const App = ({children}) => (
-  <div>
+  <div className="app">
     <Header />
     {children}
   </div>

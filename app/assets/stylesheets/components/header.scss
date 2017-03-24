@@ -1,8 +1,14 @@
+.app {
+  width: 100%;
+  margin: 0;
+}
+
 .header-bar {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
+  margin: 0 10%;
 }
 
 
@@ -10,4 +16,63 @@
   max-height: 60px;
   max-width: 60px;
   display: inline;
+}
+
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  // margin-left: 300px;
+}
+
+.logo-name {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.navbar-login-signup {
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $circular;
+  font-size: 20px;
+  color: $gray;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.navbar-login-signup > li {
+  align-items: center;
+}
+.navbar-login-signup > li > a {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;    
+  position: relative;
+  font-size: 13px;
+}
+
+.nav-button {
+  font-family: $circular;
+  color: $gray;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;    
+  position: relative;
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 25px;
+  background-color: $lighter-than-logo;
+}
+
+.nav-whole-group {
+  display: flex;
+  align-items: baseline;
+  // margin-right: 300px;
+}
+
+.nav-group {
+  display: flex;
+  align-items: baseline;
+  font-size: 16px;
 }
