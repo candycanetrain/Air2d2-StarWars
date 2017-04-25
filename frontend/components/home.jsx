@@ -11,7 +11,7 @@ const Home = ({children}) => (
     <div className="home">
 
       <div className="video-div">
-        <video controls autoPlay loop id="home-video">
+        <video autoPlay loop id="home-video">
           <source src="http://res.cloudinary.com/candycanetrain/video/upload/ac_none,c_scale,w_1083/v1490078767/Candra_Star_Wars_Clip_aj8p7d.mp4"/>
         </video>
       </div>
