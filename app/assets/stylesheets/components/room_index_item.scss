@@ -20,9 +20,13 @@
   flex: 1 1 33%;
 }
 
+.room-pic {
+  width: 350px;
+  height: 200px;
+}
 .featured-room-img {
-  max-height: 300px;
-  max-width: 350px;
+  height: 100%;
+  width: 100%;
 }
 
 .featured-room-price {

@@ -14,14 +14,16 @@ class RoomIndexItem extends React.Component {
   }
 
   render() {
-    const room = this.props.room
+    const room = this.props.room;
     return(
       <div className="room-index-item"
         onClick={this.handleClick}>
-        <h3>{room.name} in 
+        <h3>{room.name} in
           <div className="city-name-index-item">{room.city}</div>
         </h3>
-        <img className="featured-room-img" src={room.img_url} alt=""/>
+        <div className="room-pic">
+          <img className="featured-room-img" src={room.img_url} alt=""/>
+        </div>
         <div className="featured-room-price">Price: {room.price} Credits</div>
       </div>
     );
