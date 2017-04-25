@@ -14,9 +14,6 @@ User.create(name: "Yoda", email: "yoda@air2d2.com", password: "yoda1234");
 User.create(name: "Leia Organa", email: "leiaorgana@air2d2.com", password: "leiaorgana");
 
 
-Room.create(name: "The Lars Homestead", city: "Tatooine", price: "4242.89", lat: 37.780437, lng: -122.513693, description: "A quaint moisture farm in the desert plains of Tatooine, this spacious home has no-frills, practical comfort with room for 4.", bedrooms: 4, beds: 4, bathrooms: 4, homeType: "farm house", img_url: "http://res.cloudinary.com/candycanetrain/image/upload/c_scale,w_400/v1489949473/Larshomestead2_g5bjb2.png", accommodates: 4);
-
-Room.create(name: "Yoda's Hut", city: "Dagobah", price: "4242.89", lat: 37.802480, lng: -122.472839, description: "The home of a legendary jedi master, staying here will give you a glimpse into his finals days. Also, great hiking trails nearby, perfect for training to be a jedi.", bedrooms: 1, beds: 1, bathrooms: 1, homeType: "hut", img_url: "http://res.cloudinary.com/candycanetrain/image/upload/c_scale,w_400/v1489946010/yodas-hut_a3d1133d_z1gkf3.jpg", accommodates: 2);
 
 Room.create(name: "Fortified Compound", city: "Mustafar", price: "4242.89", lat: 37.889486, lng: -122.610855, description: "Spectacular views of the lava flows on Mustafar, this fortress has a very isolated location and top of the line security for all of your Sith secrets. Shielded from the intense heat and magma so you can enjoy your stay without burning to a crisp.", bedrooms: 6, beds: 12, bathrooms: 4, homeType: "fortress", img_url: "http://res.cloudinary.com/candycanetrain/image/upload/c_scale,h_400/v1489946009/SidiousMustafarLab-CotF_oxhfn2.png", accommodates: 12);
 
@@ -28,6 +25,9 @@ Room.create(name: "Ewok Treehut", city: "Endor", price: "4242.89", lat: 37.35771
 Room.create(name: "Mos Eisley Home", city: "Tatooine", price: "4242.89", lat: 37.357714, lng: -121.920776, description: "A home in Mos Eisley. Beware of scum and villainy.", bedrooms: 2, beds: 2, bathrooms: 1, homeType: "house", img_url: "http://res.cloudinary.com/candycanetrain/image/upload/v1490091974/Mos_Eisley_home_jqot51.jpg", accommodates: 4);
 Room.create(name: "Carbon Freeze Chamber", city: "Bespin", price: "4242.89", lat: 37.357714, lng: -121.920776, description: "A perfect place to get away from the summer heat or pass the time.", bedrooms: 1, beds: 0, bathrooms: 0, homeType: "chamber", img_url: "http://res.cloudinary.com/candycanetrain/image/upload/v1490091969/Carbon-freeze_chamber_SWB_f93zh0.png", accommodates: 1);
 
+Room.create(name: "The Lars Homestead", city: "Tatooine", price: "4242.89", lat: 37.780437, lng: -122.513693, description: "A quaint moisture farm in the desert plains of Tatooine, this spacious home has no-frills, practical comfort with room for 4.", bedrooms: 4, beds: 4, bathrooms: 4, homeType: "farm house", img_url: "http://res.cloudinary.com/candycanetrain/image/upload/c_scale,w_400/v1489949473/Larshomestead2_g5bjb2.png", accommodates: 4);
+
+Room.create(name: "Yoda's Hut", city: "Dagobah", price: "4242.89", lat: 37.802480, lng: -122.472839, description: "The home of a legendary jedi master, staying here will give you a glimpse into his finals days. Also, great hiking trails nearby, perfect for training to be a jedi.", bedrooms: 1, beds: 1, bathrooms: 1, homeType: "hut", img_url: "http://res.cloudinary.com/candycanetrain/image/upload/c_scale,w_400/v1489946010/yodas-hut_a3d1133d_z1gkf3.jpg", accommodates: 2);
 
 Booking.create(user_id: 1, room_id: 1, start_date: DateTime.new(2016, 3,20), end_date: DateTime.new(2016, 3, 25), party_size: 2);
 Booking.create(user_id: 1, room_id: 2, start_date: DateTime.new(2016, 3,26), end_date: DateTime.new(2016, 3, 28), party_size: 2);
@@ -44,10 +44,10 @@ Booking.create(user_id: 3, room_id: 2, start_date: DateTime.new(2016, 3,30), end
 Booking.create(user_id: 3, room_id: 1, start_date: DateTime.new(2016, 4,2), end_date: DateTime.new(2016, 4, 3), party_size: 3);
 
 Review.create(user_id: 1, room_id: 1, body: "What a wonderful place to stay", rating: 5)
-Review.create(user_id: 1, room_id: 2, body: "What an awful place to stay", rating: 5)
-Review.create(user_id: 1, room_id: 1, body: "What a wonderful place to stay", rating: 3)
-Review.create(user_id: 1, room_id: 1, body: "What an awful place to stay", rating: 2)
-Review.create(user_id: 1, room_id: 1, body: "What a wonderful place to stay", rating: 1)
-Review.create(user_id: 1, room_id: 2, body: "What an awful place to stay", rating: 3)
-Review.create(user_id: 1, room_id: 1, body: "What a wonderful place to stay", rating: 4)
-Review.create(user_id: 1, room_id: 1, body: "What an awful place to stay", rating: 5)
+Review.create(user_id: 2, room_id: 2, body: "What an awful place to stay", rating: 5)
+Review.create(user_id: 3, room_id: 1, body: "It was okay", rating: 3)
+Review.create(user_id: 3, room_id: 1, body: "I ALWAYS stay here", rating: 5)
+Review.create(user_id: 2, room_id: 1, body: "AWFUL PLACE!", rating: 1)
+Review.create(user_id: 4, room_id: 2, body: "It was decent for the price", rating: 3)
+Review.create(user_id: 1, room_id: 1, body: "Liked it enough", rating: 4)
+Review.create(user_id: 4, room_id: 1, body: "I ALWAYS stay here", rating: 5)
