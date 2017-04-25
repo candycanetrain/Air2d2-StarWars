@@ -37,7 +37,12 @@ Room.create(name: "The Lars Homestead", city: "Tatooine", price: "4242.89", lat:
 Room.create(name: "Yoda's Hut", city: "Dagobah", price: "4242.89", lat: 37.802480, lng: -122.472839, description: "The home of a legendary jedi master, staying here will give you a glimpse into his finals days. Also, great hiking trails nearby, perfect for training to be a jedi.", bedrooms: 1, beds: 1, bathrooms: 1, homeType: "hut", img_url: "http://res.cloudinary.com/candycanetrain/image/upload/c_scale,w_400/v1489946010/yodas-hut_a3d1133d_z1gkf3.jpg", accommodates: 2);
 
 Booking.create(user_id: 1, room_id: 1, start_date: DateTime.new(2016, 3,20), end_date: DateTime.new(2016, 3, 25), party_size: 2);
+Booking.create(user_id: 5, room_id: 1, start_date: DateTime.new(2015, 3,20), end_date: DateTime.new(2015, 3, 25), party_size: 2);
+Booking.create(user_id: 4, room_id: 1, start_date: DateTime.new(2014, 3,20), end_date: DateTime.new(2014, 3, 25), party_size: 2);
 Booking.create(user_id: 1, room_id: 2, start_date: DateTime.new(2016, 3,26), end_date: DateTime.new(2016, 3, 28), party_size: 2);
+Booking.create(user_id: 2, room_id: 2, start_date: DateTime.new(2016, 3,29), end_date: DateTime.new(2016, 3, 30), party_size: 2);
+Booking.create(user_id: 4, room_id: 2, start_date: DateTime.new(2016, 4,29), end_date: DateTime.new(2016, 4, 30), party_size: 2);
+Booking.create(user_id: 2, room_id: 1, start_date: DateTime.new(2016, 2,28), end_date: DateTime.new(2016, 2, 29), party_size: 2);
 Booking.create(user_id: 1, room_id: 3, start_date: DateTime.new(2016, 3,30), end_date: DateTime.new(2016, 4, 5), party_size: 2);
 Booking.create(user_id: 1, room_id: 4, start_date: DateTime.new(2016, 4,8), end_date: DateTime.new(2016, 4, 20), party_size: 2);
 Booking.create(user_id: 1, room_id: 5, start_date: DateTime.new(2016, 3,20), end_date: DateTime.new(2016, 3, 25), party_size: 2);
@@ -50,11 +55,11 @@ Booking.create(user_id: 3, room_id: 4, start_date: DateTime.new(2016, 3,28), end
 Booking.create(user_id: 3, room_id: 2, start_date: DateTime.new(2016, 3,30), end_date: DateTime.new(2016, 4, 1), party_size: 3);
 Booking.create(user_id: 3, room_id: 1, start_date: DateTime.new(2016, 4,2), end_date: DateTime.new(2016, 4, 3), party_size: 3);
 
-Review.create(user_id: 1, room_id: 1, body: "What a wonderful place to stay", rating: 5)
-Review.create(user_id: 2, room_id: 2, body: "What an awful place to stay", rating: 5)
-Review.create(user_id: 3, room_id: 1, body: "It was okay", rating: 3)
-Review.create(user_id: 3, room_id: 1, body: "I ALWAYS stay here", rating: 5)
-Review.create(user_id: 2, room_id: 1, body: "AWFUL PLACE!", rating: 1)
-Review.create(user_id: 4, room_id: 2, body: "It was decent for the price", rating: 3)
-Review.create(user_id: 1, room_id: 1, body: "Liked it enough", rating: 4)
-Review.create(user_id: 4, room_id: 1, body: "I ALWAYS stay here", rating: 5)
+Review.create(user_id: 1, room_id: 1, body: "What a wonderful place to stay", rating: 5);
+Review.create(user_id: 2, room_id: 2, body: "What an awful place to stay", rating: 5);
+Review.create(user_id: 3, room_id: 1, body: "It was okay", rating: 3);
+Review.create(user_id: 3, room_id: 1, body: "I ALWAYS stay here", rating: 5);
+Review.create(user_id: 2, room_id: 1, body: "AWFUL PLACE!", rating: 1);
+Review.create(user_id: 4, room_id: 2, body: "It was decent for the price", rating: 3);
+Review.create(user_id: 5, room_id: 1, body: "Liked it enough", rating: 4);
+Review.create(user_id: 4, room_id: 1, body: "I ALWAYS stay here", rating: 5);
