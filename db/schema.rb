@@ -49,12 +49,12 @@ ActiveRecord::Schema.define(version: 20170322211311) do
     t.integer  "beds",                                 null: false
     t.integer  "bathrooms",                            null: false
     t.string   "homeType",                             null: false
+    t.integer  "accommodates",                         null: false
     t.text     "amenities"
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
     t.float    "lat",                                  null: false
     t.float    "lng",                                  null: false
-    t.integer  "accommodates",                         null: false
     t.string   "img_url",                              null: false
     t.index ["city"], name: "index_rooms_on_city", using: :btree
     t.index ["name"], name: "index_rooms_on_name", using: :btree

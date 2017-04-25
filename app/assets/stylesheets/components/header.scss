@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  margin: 0 10%;
+  margin: 24px 10% 24px;
 }
 
 
@@ -47,7 +47,7 @@
 .navbar-login-signup > li > a {
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px;    
+  padding: 10px 10px;
   position: relative;
   font-size: 13px;
 }
@@ -57,7 +57,7 @@
   color: $gray;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px;    
+  padding: 10px 10px;
   position: relative;
   font-size: 14px;
   font-weight: normal;

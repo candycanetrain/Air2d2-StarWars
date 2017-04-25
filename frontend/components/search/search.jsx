@@ -24,7 +24,7 @@ class Search extends React.Component {
     this.handleForm = this.handleForm.bind(this);
   }
 
- 
+
 
   handleForm(e) {
     // debugger
@@ -59,7 +59,7 @@ class Search extends React.Component {
   //   });
   // }
 
-  
+
 
   render() {
     return(
@@ -72,7 +72,7 @@ class Search extends React.Component {
               <input type="text" className="search-fields" className="location-input" name="city" id="search-location" placeholder="City" onChange={this.update('city')}/>
             </li>
 
-            <li className="search-form-dates"> 
+            <li className="search-form-dates">
               <label htmlFor="search-dates" className="search-form-label">When</label>
               <br />
 
@@ -88,8 +88,8 @@ class Search extends React.Component {
             <li className="search-form-guests">
               <label htmlFor="search-guests" className="search-form-label">Guests</label>
               <br />
-              
-              <select className="search-fields" className="guests-input" name="party_size" id="search-guests" placeholder="2 Guests" onChange={this.update('party_size')}>  
+
+              <select className="search-fields" className="guests-input" name="party_size" id="search-guests" placeholder="2 Guests" onChange={this.update('party_size')}>
                 <option value="1">1 guest</option>
                 <option value="2">2 guests</option>
                 <option value="3">3 guests</option>
@@ -102,21 +102,21 @@ class Search extends React.Component {
                 <option value="10">10 guests</option>
                 <option value="11">11 guests</option>
                 <option value="12">12 guests</option>
-              </select>  
+              </select>
             </li>
-            <li className="li-button">  
+            <li className="li-button">
               <button type="submit" onClick={this.handleForm} className="search-button">
-                <i className="fa fa-search" aria-hidden="true"></i>
+                Search
               </button>
             </li>
           </ul>
-          
+
         </form>
-    
-        
+
+
       </div>
     );
-    
+
   }
 }
 

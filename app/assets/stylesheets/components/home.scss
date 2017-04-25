@@ -1,50 +1,107 @@
 .home {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
+  // display: flex;
+  // text-align: center;
+  // flex-direction: column;
   // justify-content: center;
+  height: 600px;
   position: relative;
-  background-size: cover;
-  width: 100%;
-  height: 364.76px; 
-  min-width: 300px;
-  color: $white;
+  padding: 20px;
+
+  // position: absolute;
+  // background-size: cover;
+  // width: 100%;
+  // height: 364.76px;
+  // min-width: 300px;
+  // color: $white;
 }
 
-#home-welcome {
-  font-size: 47px;
-  text-shadow: 3px 4px $shadow;
-  margin-top: 120px;
-}
 
-#home-subtitle {
-  text-shadow: 3px 4px $shadow;
-  font-size: 15px;
-}
 
 .video-div {
   position:absolute;
-  height: 100%;
-  width: 100%;
-  overflow:hidden;
-  z-index: -100;
+
+  top:0%;
+	left:0%;
+	height:100%;
+	width:100%;
+	overflow: hidden;
+  z-index: 0;
+
+  // height: 100%;
+  // width: 100%;
+  // overflow:hidden;
+  // z-index: -100;
 }
 
 
 .video {
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position:absolute;
+	width: 100%;
+  height: auto;
   z-index: 0;
+
+
+  // position: fixed;
+  // right: 0;
+  // bottom: 0;
+  // min-width: 100%;
+  // // min-height: 100%;
+  // width: 100%;
+  // height: auto;
+  // z-index: -100;
+  // background-size: cover;
+}
+
+.overlay {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background: rgba(0,0,0,0.3);
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 50%;
 }
 
 #home-video {
-  width: 100%;
-  min-width: 412px;
+  // width: 100%;
+  // min-width: 412px;
+  min-height: 100%;
+  min-width: 100%;
 }
-// #media (max-width: 1089px) {
-//       #welcome-video {
-//         height:100%;
-//         width: auto;
+
+
+.tag-line {
+   display: block;
+   position: relative;
+   top: 35%;
+   color: white;
+   text-align: center;
+   h1 {
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: 60px;
+     text-shadow: 2px 2px $shadow;
+
+   }
+   h4 {
+     font-weight: normal;
+     font-size: 18px;
+     margin: 0;
+     text-shadow: 1px 1px $shadow;
+
+   }
+}
+
+// #home-welcome {
+//   font-size: 47px;
+//   text-shadow: 2px 2px $shadow;
+//   margin-top: 120px;
+// }
+//
+// #home-subtitle {
+//   text-shadow: 1px 1px $shadow;
+//   font-size: 15px;
 // }
