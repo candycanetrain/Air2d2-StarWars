@@ -52,21 +52,19 @@
 }
 
 .search-button {
-  // background-color: $lighter-than-logo;
-  // display: inline;
   opacity: 0.96;
-    right: 2px;
-    top: 2px;
-    color: #aaa;
-    border-radius: 3px;
-    font-size: 21px;
-    padding: 5px 10px 1px;
-    // @include transition(all 200ms ease-in-out)
 
-    &:hover {
-      color: #fff;
-      background-color: $lighter-than-logo;
-    }
+  color: #757575;
+  border-radius: 3px;
+  font-size: 21px;
+  padding: 20px 10px 20px;
+  background-color: $lighter-than-logo;
+  margin: 20px 10px 10px 10px;
+
+  &:hover {
+    color: #fff;
+    background-color: $lighter-than-logo;
+  }
 }
 
 .li label {
