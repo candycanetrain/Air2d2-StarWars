@@ -29,7 +29,7 @@ class CurrentRoomShow extends React.Component {
       return( <span className="big-details-items">{max_party_size} Guest</span>);
     }
   }
-  
+
 
   renderBedrooms(numOfBedrooms) {
     if (numOfBedrooms > 1) {
@@ -49,33 +49,33 @@ class CurrentRoomShow extends React.Component {
 
   render() {
     const room = this.props.room
-    
+
     return(
       <div className="show-page">
         <img className="show-img" src={room.img_url} alt=""/>
         <div className="show-details">
           <div className="short-summary">
-            
+
             <span className="detail-name">{room.name}</span>
             <span className="detail-city"><label>City: </label> {room.city}</span>
-            
+
             <div className="big-details">
               <div className="big-details-col">
-                <img src="http://res.cloudinary.com/candycanetrain/image/upload/v1490186128/home_r5atyr.png" alt=""/>
-                <span>{room.homeType}</span>             
+                <img src="http://res.cloudinary.com/candyentropy/image/upload/v1493100168/home_r5atyr_c8qlnj.png" alt=""/>
+                <span>{room.homeType}</span>
               </div>
               <div className="big-details-col">
-                <img src="http://res.cloudinary.com/candycanetrain/image/upload/v1490186133/multiple-users-silhouette_knjpis.png" alt=""/>
+                <img src="http://res.cloudinary.com/candyentropy/image/upload/v1493100170/multiple-users-silhouette_knjpis_j6keuo.png" alt=""/>
                 {this.renderGuests(room.accommodates)}
               </div>
 
               <div className="big-details-col">
-                <img src="http://res.cloudinary.com/candycanetrain/image/upload/v1490186126/door_fjofuz.png" alt=""/>
+                <img src="http://res.cloudinary.com/candyentropy/image/upload/v1493100168/door_fjofuz_drhl5o.png" alt=""/>
                 {this.renderBedrooms(room.bedrooms)}
               </div>
 
               <div className="big-details-col">
-                <img src="http://res.cloudinary.com/candycanetrain/image/upload/v1490186124/bed_nzrgdr.png" alt=""/>
+                <img src="http://res.cloudinary.com/candyentropy/image/upload/v1493100168/bed_nzrgdr_ehvy8t.png" alt=""/>
                 {this.renderBeds(room.beds)}
               </div>
             </div>
@@ -83,7 +83,7 @@ class CurrentRoomShow extends React.Component {
 
           <div className="about">
             <h4>About this Listing</h4>
-            
+
             <table className="about-table">
               <tbody>
               <tr>
@@ -109,7 +109,7 @@ class CurrentRoomShow extends React.Component {
             <h3 className="booking-h3">Book this room</h3>
 
             <BookingContainer currentRoom={room}/>
-            
+
         </div>
       </div>
     );

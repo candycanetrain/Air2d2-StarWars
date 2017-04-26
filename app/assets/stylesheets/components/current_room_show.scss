@@ -13,9 +13,7 @@
 .short-summary {
   border: 1px solid $gray;
   display: block;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
+  padding: 50px 50px;
   width: 500px;
 }
 .detail-name {
@@ -23,6 +21,7 @@
   font-weight: bold;
   left: 0;
   display: block;
+  margin-bottom: 20px;
 }
 
 .detail-city {
@@ -36,8 +35,8 @@
 .big-details {
   display: flex;
   justify-content: space-between;
-  
-  
+
+
 }
 
 .big-details-col {
@@ -57,10 +56,11 @@
 
 .about {
   display: block;
-  margin-bottom: 20px; 
-      padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px; 
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  font-size: larger;
 }
 
 .about tbody{
@@ -73,7 +73,7 @@
 
 .about-table tr{
   display: block;
-  
+
 }
 
 
@@ -88,7 +88,7 @@
   margin-right: 30px;
   min-width: 80px;
   text-align: left;
-  
+
 }
 
 
@@ -162,10 +162,11 @@
   width: 300px;
   border: 1px solid $gray;
   margin-top: 10%;
-     padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 30%;
 }
 
 .booking-header {
@@ -180,11 +181,11 @@
 }
 
 .booking-header-item-price {
-  font-size: 18px;  
+  font-size: 18px;
   font-weight: bold;
 }
 .booking-header-item-per-night {
-  font-size: 14px;  
+  font-size: 14px;
 }
 .panel1 {
   display: flex;
@@ -223,6 +224,3 @@
 .top-part {
 
 }
-
-
-
