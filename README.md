@@ -11,21 +11,21 @@ You have the option to sign up as a new user, log in as yourself, or log in as a
 
 ## Features & Implementation
 
-On the database side, there are main models/tables for users, rooms, reviews, and bookings. 
+On the database side, there are main models/tables for users, rooms, reviews, and bookings.
 
-The home screen for Air2d2: 
+The home screen for Air2d2:
 
-![image of home](docs/images/welcome_page)
+![image of home](docs/images/welcome_page.png)
 
-The home page slightly changes when a user logs in by displaying a greeting. 
+The home page slightly changes when a user logs in by displaying a greeting.
 
-The show page for a room: 
+The show page for a room:
 
 ![image of show](docs/images/room_show_page)
 ![image of show2](docs/images/room_show_page2)
 
 
-Two main features are for users to leave reviews and to book rooms: 
+Two main features are for users to leave reviews and to book rooms:
 
 ![image of reviews and bookings](docs/images/reviews_bookings.png)
 
@@ -40,7 +40,7 @@ I wanted to be DRY (DON'T REPEAT YOURSELF), so I utilized the same AJAX method a
 
 For example, here is a query method to search by city: `@rooms = Room.all.where("city LIKE ?", "%#{city}%")`.
 
-The action: 
+The action:
     ```export const fetchRooms = filters => dispatch => {
   return(
   RoomUtil.fetchRooms(filters)
