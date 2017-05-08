@@ -43,11 +43,6 @@
   font-size: 14px;
 }
 
-.room-index-item h3 {
-  &:hover {
-    cursor: pointer;
-  }
-}
 
 .mini-summary-under-pic {
   color: #484848;
@@ -55,6 +50,9 @@
   font-size: 15px;
   letter-spacing: 0.2px;
   line-height: 18px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .room-price {
