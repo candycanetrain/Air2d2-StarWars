@@ -54,15 +54,19 @@
 
 .nav-button {
   font-family: $circular;
-  color: $gray;
+  color: $white;
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px;
   position: relative;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: bold;
   margin-left: 25px;
   background-color: $lighter-than-logo;
+
+  &:hover {
+    color: $gray;
+  }
 }
 
 .nav-whole-group {
