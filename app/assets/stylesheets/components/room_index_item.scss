@@ -1,3 +1,8 @@
+.room-index-header {
+  padding: 2px 0px;
+  margin-bottom: 24px;
+}
+
 
 .room-index-body {
   margin: 5% 10%;
@@ -20,6 +25,10 @@
   flex: 1 1 33%;
 }
 
+.featured-room {
+  padding: 0 8px 30px;
+
+}
 .room-pic {
   width: 350px;
   height: 200px;
@@ -32,4 +41,24 @@
 
 .featured-room-price {
   font-size: 14px;
+}
+
+.room-index-item h3 {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mini-summary-under-pic {
+  color: #484848;
+  padding-top: 8px;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  line-height: 18px;
+}
+
+.room-price {
+  display: block;
+  font-weight: 700;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 }

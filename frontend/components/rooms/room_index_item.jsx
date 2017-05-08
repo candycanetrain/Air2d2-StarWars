@@ -18,13 +18,12 @@ class RoomIndexItem extends React.Component {
     return(
       <div className="room-index-item"
         onClick={this.handleClick}>
-        <h3>{room.name} in
-          <div className="city-name-index-item">{room.city}</div>
-        </h3>
+
         <div className="room-pic">
           <img className="featured-room-img" src={room.img_url} alt=""/>
         </div>
-        <div className="featured-room-price">Price: {room.price} Credits</div>
+        <div className="mini-summary-under-pic"><span className="room-price">{room.price} Credits  </span><span className="mini-info">{room.name} in
+          <span className="city-name-index-item"> {room.city}</span></span></div>
       </div>
     );
   }
