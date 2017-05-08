@@ -81,7 +81,6 @@
 .search-form-label {
   right: 2px;
   top: 2px;
-  border-radius: 3px;
   font-size: 21px;
   padding: 5px 10px 1px;
 
@@ -129,6 +128,7 @@
   width: 180px;
   vertical-align: middle;
   border: 0;
+  outline: none;
 }
 
 .li-button {
