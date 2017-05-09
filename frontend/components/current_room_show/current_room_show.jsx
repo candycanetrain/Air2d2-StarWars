@@ -47,12 +47,17 @@ class CurrentRoomShow extends React.Component {
     }
   }
 
+
   render() {
-    const room = this.props.room
+    const room = this.props.room;
+    let divStyle = {
+      backgroundImage: 'url(' + room.img_url + ')'
+    }
 
     return(
       <div className="show-page">
-        <img className="show-img" src={room.img_url} alt=""/>
+        <div className="img-container" style={divStyle}>
+        </div>
         <div className="show-details">
           <div className="short-summary">
 
@@ -95,7 +100,7 @@ class CurrentRoomShow extends React.Component {
               </tr>
               <tr>
                 <th>Price</th>
-                <td>Extra people: <div className="about-details">{Number.parseInt(room.price*(0.2))}/ night for extra guests</div></td>
+                <td>{room.price} Credits<br />Extra people: <div className="about-details">{Number.parseInt(room.price*(0.2))}/ night for extra guests</div></td>
               </tr>
               <tr>
                 <th>Description</th>

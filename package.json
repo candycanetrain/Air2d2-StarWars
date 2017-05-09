@@ -46,6 +46,8 @@
     "node": "6.9.5",
     "npm": "3.10.x"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^20.0.0"
+  },
   "description": ""
 }
