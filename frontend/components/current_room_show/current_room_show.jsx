@@ -3,6 +3,8 @@ import { Link } from 'react-router';
 import RoomMap from '../room_map/room_map';
 import BookingContainer from '../booking/booking_container';
 import ReviewContainer from '../review/review_container';
+import Modal from 'react-modal';
+import ModalStyle from './modal_style';
 
 // import RoomDetail from './room_detail';
 // <ReviewContainer currentRoom={room} currentUser={currentUser}/>
@@ -12,6 +14,18 @@ class CurrentRoomShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = props.room;
+    this.setState({modalIsOpen: false});
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal() {
+    this.setState({modalIsOpen: true});
+  }
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
   }
 
   componentWillReceiveProps(newProps) {
@@ -56,7 +70,7 @@ class CurrentRoomShow extends React.Component {
 
     return(
       <div className="show-page">
-        <div className="img-container" style={divStyle}>
+        <div className="img-container" style={divStyle} onClick={this.openModal}>
         </div>
         <div className="show-details">
           <div className="short-summary">
@@ -116,6 +130,16 @@ class CurrentRoomShow extends React.Component {
             <BookingContainer currentRoom={room}/>
 
         </div>
+
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          style={ModalStyle}
+          contentLabel="Modal"
+          className="img-modal"
+        >
+          <img src={room.img_url} alt="" onClick={this.closeModal}/>
+        </Modal>
       </div>
     );
   }

@@ -66,4 +66,10 @@
   height: 350px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
