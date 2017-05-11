@@ -8,11 +8,9 @@ const ModalStyle = {
     backgroundColor   : 'rgba(255, 255, 255, 0.75)'
   },
   content : {
-    position                   : 'relative',
-    top                        : '40px',
-    left                       : '40px',
-    right                      : '40px',
-    bottom                     : '40px',
+    position                   : 'absolute',
+    top                        : '50%',
+    left                       : '50%',
     border                     : '1px solid #ccc',
     background                 : '#fff',
     overflow                   : 'auto',
@@ -20,7 +18,8 @@ const ModalStyle = {
     borderRadius               : '4px',
     outline                    : 'none',
     padding                    : '25px',
-    width                      : '80%'
+    width                      : '60%',
+    transform                  : 'translate(-50%, -50%)'
   }
 };
 
