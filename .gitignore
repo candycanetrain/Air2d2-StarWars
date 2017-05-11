@@ -28,3 +28,4 @@ Bugs_log.md
 # Ignore application configuration
 /config/application.yml
 /config/cloudinary.yml
+latest.dump
