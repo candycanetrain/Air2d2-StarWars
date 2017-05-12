@@ -18,7 +18,7 @@ class SessionForm extends React.Component {
 		this.closeModal = this.closeModal.bind(this);
 
   }
- 
+
   componentDidUpdate() {
 		this.redirectIfLoggedIn();
   }
@@ -39,7 +39,7 @@ class SessionForm extends React.Component {
     if(this.state.modalType === "login") {
 			return <button className="toggle-button" onClick={this.openModal.bind(this, 'signup')}>Sign up</button>;
     } else {
-        return <button className="toggle-button" onClick={this.openModal.bind(this, 'login')}>Log in</button>;      
+        return <button className="toggle-button" onClick={this.openModal.bind(this, 'login')}>Log in</button>;
     }
   }
 
@@ -47,7 +47,7 @@ class SessionForm extends React.Component {
     if(this.state.modalType === "login") {
       return <div className="toggle-message">Don't have an account?</div>;
     } else {
-      return <div className="toggle-message">Already have an Air2d2 account?</div>;      
+      return <div className="toggle-message">Already have an Air2d2 account?</div>;
     }
   }
 
@@ -85,7 +85,7 @@ class SessionForm extends React.Component {
 			modalType
 		});
     this.props.clearErrors([]);
-    
+
 	}
 
 	closeModal() {
@@ -99,7 +99,7 @@ class SessionForm extends React.Component {
         <nav className="login-signup">
           <button className="nav-button" onClick={this.openModal.bind(this, 'signup')}>Sign up</button>
 					<button className="nav-button" onClick={this.openModal.bind(this, 'login')}>Login</button>
-					
+
 				</nav>
 				<Modal
 					contentLabel="Modal"
@@ -127,7 +127,7 @@ class SessionForm extends React.Component {
                     onChange={this.update("email")}
                     className="login-input" />
                   <i className="fa fa-envelope-o" aria-hidden="true"></i>
-                    
+
                 </div>
                 <br/>
                 <div className="control-group">
@@ -137,7 +137,7 @@ class SessionForm extends React.Component {
                     className="login-input" />
                   <i className="fa fa-lock" aria-hidden="true"></i>
                 </div>
-                
+
                 <br/>
                 <div className="submit-button">
                   <input type="submit" value="Submit" />
@@ -145,10 +145,10 @@ class SessionForm extends React.Component {
               </div>
             </form>
             <div className="toggle-signup-login">
-              <div className="toggle">{this.toggleMessage()}</div> 
+              <div className="toggle">{this.toggleMessage()}</div>
               <div className="signup-demo">
                 <div className="toggle">{this.navLink()}</div>
-                <button className="toggle-button" onClick={this.guestLogin.bind(this)}>Log in as Demo</button>                            
+                <button className="toggle-button" onClick={this.guestLogin.bind(this)}>Log in as Demo</button>
               </div>
             </div>
           </div>

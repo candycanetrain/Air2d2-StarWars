@@ -3,10 +3,11 @@ import { createReview, fetchReviews } from '../../actions/review_actions';
 import Review from './review';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   const currentUser = state.session.currentUser;
   const room = state.currentRoom;
   const errors = state.reviews.errors;
+  // debugger
+
   return {
     reviews: state.reviews.reviews,
     errors: state.reviews.errors,

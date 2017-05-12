@@ -14,7 +14,7 @@ class CurrentRoomShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = props.room;
-    this.setState({modalIsOpen: false});
+    // debugger
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -34,7 +34,16 @@ class CurrentRoomShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchRoom(this.props.roomId);
+    this.setState({modalIsOpen: false});
+    // debugger
   }
+
+  //
+  // componentWillUnmount() {
+  //   ;
+  //   this.setState()
+  //   debugger
+  // }
 
   renderGuests(max_party_size) {
     if (max_party_size > 1) {
