@@ -15,7 +15,7 @@ class Api::RoomsController < ApplicationController
     #logic to filter rooms here. (where(parmas))
     # debugger
     all_rooms = Room.all
-    
+
     if number_to_display != 0
       @rooms = Room.all.limit(number_to_display)
       # all_rooms.each do |room|
@@ -26,8 +26,8 @@ class Api::RoomsController < ApplicationController
       @rooms
     elsif city != nil
         #Room.where("city LIKE ?", "%#{city}%")
-      
-      @rooms = Room.all.where("city LIKE ?", "%#{city}%")
+
+      @rooms = Room.all.where("lower(city) LIKE lower(?)", "%#{city}%")
       # all_rooms.each do |room|
       #   @rooms.push(room) if room.city == city
       # end
@@ -35,7 +35,7 @@ class Api::RoomsController < ApplicationController
     else
       @rooms = all_rooms
     end
-    
+
   end
 
   def show
@@ -67,8 +67,8 @@ class Api::RoomsController < ApplicationController
   def end_date
     room_params[:endDate];
   end
-  
 
 
-  
+
+
 end
