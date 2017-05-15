@@ -5,11 +5,62 @@ import DatePicker from 'react-datepicker';
 import {START_DATE, END_DATE} from 'react-dates/constants';
 import {hashHistory} from 'react-router';
 import moment from 'moment';
+import Autosuggest from 'react-autosuggest';
 
 // import '../../../app/assets/stylesheets/components/datepicker.css';
 //
 //import RoomMap from '../room_map/room_map';
 //import {RoomIndex} from '../rooms/room_index';
+
+const suggestions = [
+  {
+    text: 'Bespin'
+  },
+  {
+    text: 'Coruscant'
+  },
+  {
+    text: 'Dagobah'
+  },
+  {
+    text: 'Endor'
+  },
+  {
+    text: 'Hoth'
+  },
+  {
+    text: 'Mustafar'
+  },
+  {
+    text: 'Naboo'
+  },
+  {
+    text: 'Tatooine'
+  },
+  {
+    text: 'Yavin IV'
+  }
+];
+
+
+const getSuggestions = value => {
+  const inputValue = value.toLowerCase();
+  const inputLength = inputValue.length;
+
+  return inputLength === 0 ? [] : suggestions.filter(lang =>
+    lang.text.toLowerCase().slice(0, inputLength) === inputValue
+  );
+};
+
+const getSuggestionValue = suggestion => suggestion.text;
+
+const renderSuggestion = suggestion => {
+  return (
+  <div>
+    {suggestion.text}
+  </div>
+  )
+};
 
 class Search extends React.Component {
   constructor(props) {
@@ -17,11 +68,16 @@ class Search extends React.Component {
     this.state={
       city: '',
       party_size: 0,
-      focus: null
+      focus: null,
+      value: '',
+      suggestions: []
     };
     this.update = this.update.bind(this);
     this.handleFocusChange = this.handleFocusChange.bind(this);
     this.handleForm = this.handleForm.bind(this);
+    this.onChange = this.onChange.bind(this);
+    this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(this);
+    this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(this);
   }
 
 
@@ -47,6 +103,26 @@ class Search extends React.Component {
     this.setState({focus});
   }
 
+  onChange(event, { newValue }) {
+    event.preventDefault();
+    this.setState({
+      value: newValue,
+      city: newValue
+    });
+  };
+
+  onSuggestionsFetchRequested({ value }) {
+   this.setState({
+     suggestions: getSuggestions(value)
+   });
+  };
+
+  onSuggestionsClearRequested() {
+    this.setState({
+      suggestions: []
+    });
+  };
+
   // handleChangeStartDate(date) {
   //   this.setState({
   //     startDate: date
@@ -62,6 +138,15 @@ class Search extends React.Component {
 
 
   render() {
+    const { value, suggestions } = this.state;
+
+    const inputProps = {
+      placeholder: 'Input a city (e.g. "Tatooine")',
+      value,
+      onChange: this.onChange
+    };
+
+
     return(
       <div className="search-form-row">
         <form id="search-form1" className="search-form">
@@ -69,7 +154,18 @@ class Search extends React.Component {
             <li className="search-form-location">
               <label htmlFor="search-location" className="search-form-label">Where</label>
               <br />
-              <input type="text" className="search-fields" className="location-input" name="city" id="search-location" placeholder="City" onChange={this.update('city')}/>
+
+              <Autosuggest
+                suggestions={suggestions}
+                onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                getSuggestionValue={getSuggestionValue}
+                renderSuggestion={renderSuggestion}
+                inputProps={inputProps}
+                className="search-fields"
+                className="location-input"
+                name="city" id="search-location"
+              />
             </li>
 
             <li className="search-form-dates">
