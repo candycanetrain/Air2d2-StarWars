@@ -20,6 +20,7 @@ class Review extends React.Component {
     this.updateBody = this.updateBody.bind(this);
     this.ratingChanged = this.ratingChanged.bind(this);
     this.renderReviews = this.renderReviews.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -57,7 +58,7 @@ class Review extends React.Component {
   renderErrors() {
     if (this.props.errors) {
       return(
-      <ul>
+      <ul className="errors-for-reviews">
         {this.props.errors.map((error,i) => (
           <li key={`errors-${i} `}>
             {error}
@@ -117,7 +118,7 @@ class Review extends React.Component {
 
 
           <h4 className="review-header">Leave a Review: </h4>
-          {this.renderErrors}
+          {this.renderErrors()}
           <form className="review-form" action="">
               <label className="review-label" htmlFor="review-body"></label>
               <ReactStars
