@@ -152,7 +152,7 @@ class Search extends React.Component {
         <form id="search-form1" className="search-form">
           <ul className="search-form-ul">
             <li className="search-form-location">
-              <label htmlFor="search-location" className="search-form-label">Where</label>
+
               <br />
 
               <Autosuggest
@@ -169,7 +169,7 @@ class Search extends React.Component {
             </li>
 
             <li className="search-form-dates">
-              <label htmlFor="search-dates" className="search-form-label">When</label>
+
               <br />
 
               <DateRangePicker
@@ -182,7 +182,7 @@ class Search extends React.Component {
             </li>
 
             <li className="search-form-guests">
-              <label htmlFor="search-guests" className="search-form-label">Guests</label>
+
               <br />
 
               <select className="search-fields" className="guests-input" name="party_size" id="search-guests" placeholder="2 Guests" onChange={this.update('party_size')}>
@@ -202,7 +202,7 @@ class Search extends React.Component {
             </li>
             <li className="li-button">
               <button type="submit" onClick={this.handleForm} className="search-button">
-                Search
+                <span>Search</span>
               </button>
             </li>
           </ul>
