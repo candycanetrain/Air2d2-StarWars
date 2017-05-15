@@ -37,6 +37,10 @@
   height: 100%;
   width: 100%;
   cursor:pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .featured-room-price {
