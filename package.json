@@ -7,9 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "webpack",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
@@ -50,7 +49,15 @@
     "npm": "3.10.x"
   },
   "devDependencies": {
-    "jest": "^20.0.0"
+    "babel-jest": "^20.0.1",
+    "jest": "^20.0.0",
+    "regenerator-runtime": "^0.10.5"
   },
-  "description": ""
+  "description": "",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  }
 }
