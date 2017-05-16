@@ -44,8 +44,16 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 
   gem 'pry-rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'launchy'
 end
 
 group :development do
