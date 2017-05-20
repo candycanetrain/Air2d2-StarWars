@@ -17,9 +17,11 @@ class SearchIndexItem extends React.Component {
     return(
       <div className="search-index-item"
         onClick={this.handleClick}>
-        <h3>{room.name} in {room.city}</h3>
+        <div className="featured-room-header">
+          <h3>{room.name} in {room.city}</h3>
+          <span className="featured-room-price">Book for {room.price} Credits/Night</span>
+        </div>
         <img className="featured-room-img" src={room.img_url} alt=""/>
-        <div className="featured-room-price">Price: {room.price} Credits</div>
       </div>
     );
   }
