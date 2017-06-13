@@ -24,5 +24,4 @@ class RoomIndex extends React.Component {
   }
 }
 
-
 export default RoomIndex;

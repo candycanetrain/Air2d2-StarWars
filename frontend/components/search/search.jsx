@@ -7,8 +7,6 @@ import {hashHistory} from 'react-router';
 import moment from 'moment';
 import Autosuggest from 'react-autosuggest';
 
-// import '../../../app/assets/stylesheets/components/datepicker.css';
-//
 //import RoomMap from '../room_map/room_map';
 //import {RoomIndex} from '../rooms/room_index';
 
@@ -122,20 +120,6 @@ class Search extends React.Component {
     });
   };
 
-  // handleChangeStartDate(date) {
-  //   this.setState({
-  //     startDate: date
-  //   });
-  // }
-
-  // handleChangeEndDate(date) {
-  //   this.setState({
-  //     endDate: date
-  //   });
-  // }
-
-
-
   render() {
     const { value, suggestions } = this.state;
 
@@ -181,9 +165,7 @@ class Search extends React.Component {
             </li>
 
             <li className="search-form-guests">
-
               <br />
-
               <select className="search-fields" className="guests-input" name="party_size" id="search-guests" placeholder="2 Guests" onChange={this.update('party_size')}>
                 <option value="1">1 guest</option>
                 <option value="2">2 guests</option>
@@ -205,13 +187,9 @@ class Search extends React.Component {
               </button>
             </li>
           </ul>
-
         </form>
-
-
       </div>
     );
-
   }
 }
 

@@ -5,10 +5,7 @@ class BookingIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-
   }
-
-
 
   handleDelete(id, e) {
     e.preventDefault();

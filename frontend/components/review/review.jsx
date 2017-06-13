@@ -99,24 +99,18 @@ class Review extends React.Component {
 
 
   render() {
-    // debugger
     let hasReviews;
     if (this.props.reviews.length !== 0) {
       hasReviews = true;
     } else {
       hasReviews = false;
     }
-    // if (this.props.reviews !== undefined){
-      // const reviews = this.props.reviews;
+
 
       return(
         <div className="review">
           <h3>Reviews</h3>
-
-
           {this.renderReviews(hasReviews)}
-
-
           <h4 className="review-header">Leave a Review: </h4>
           {this.renderErrors()}
           <form className="review-form" action="">
@@ -131,26 +125,13 @@ class Review extends React.Component {
               <textarea className="review-body-textarea" placeholder="Write a review here!" onChange={this.updateBody} value={this.state.body}>
               </textarea>
 
-
-
           </form>
           <button className="review-button" onClick={this.handleReview}> Submit Review</button>
                 {this.renderErrors}
 
-
-
         </div>
       );
     }
-    // else {
-      // return(
-        //  <div>
-        //   "There are no reviews"
-        // </div>
-      // );
-    // }
-  // }
-
 }
 
 export default Review;

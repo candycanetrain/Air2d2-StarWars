@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
-
 import { fetchRoom } from '../../actions/room_actions';
 import { selectRoom } from '../../reducers/selectors';
-
 import CurrentRoomShow from './current_room_show';
 
 const mapStateToProps = (state, {params}) => {

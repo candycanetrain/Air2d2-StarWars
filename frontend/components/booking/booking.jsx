@@ -15,22 +15,16 @@ class Booking extends React.Component {
     this.state = {
       party_size: 1
     };
-    // this.state = props.party_size;
   
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
     this.handleBook = this.handleBook.bind(this);
     this.handlePartySize = this.handlePartySize.bind(this);
-
   }
 
 
   componentWillReceiveProps(newProps) {
-    // debugger
     this.setState(newProps.room);
-  }
-
-  componentDidMount() {
   }
 
   handleChangeStart(date) {
@@ -54,7 +48,6 @@ class Booking extends React.Component {
     const party_size = this.state.party_size;
     this.props.createBooking({user_id: currentUserId, room_id: currentRoomId, start_date: startDate, end_date: endDate, party_size: party_size })
       .then(() => hashHistory.push("/bookings"));
-    
   }
 
   handlePartySize(e) {
@@ -65,7 +58,6 @@ class Booking extends React.Component {
   }
 
   renderErrors() {
-    // debugger
     return(
       <ul>
         {this.props.errors.map((error,i) => (
@@ -147,9 +139,7 @@ class Booking extends React.Component {
                     </select> 
                   </div>
                 </div>
-
               </div>
-
             </div>
           </div>  
         </form>
@@ -157,7 +147,6 @@ class Booking extends React.Component {
       </div>
     );
   }
-
 }
 
 export default Booking;

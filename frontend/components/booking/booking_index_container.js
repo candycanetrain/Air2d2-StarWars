@@ -4,7 +4,6 @@ import { fetchBookings, fetchBooking, deleteBooking } from '../../actions/bookin
 
 
 const mapStateToProps = (state) => {
-  // debugger
   return {
     bookings: state.bookings.bookings,
     errors: state.bookings.errors
@@ -15,8 +14,6 @@ const mapDispatchToProps = dispatch => ({
   fetchBooking: id => dispatch(fetchBooking(id)),
   fetchBookings: () => dispatch(fetchBookings()),
   deleteBooking: id => dispatch(deleteBooking(id))
- 
-  
 });
 
 export default connect(

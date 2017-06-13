@@ -6,7 +6,6 @@ const mapStateToProps = (state, ownProps) => {
   const currentUser = state.session.currentUser;
   const room = state.currentRoom;
   const errors = state.reviews.errors;
-  // debugger
 
   return {
     reviews: state.reviews.reviews,

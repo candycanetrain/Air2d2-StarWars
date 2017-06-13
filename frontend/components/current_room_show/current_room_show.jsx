@@ -6,16 +6,11 @@ import ReviewContainer from '../review/review_container';
 import Modal from 'react-modal';
 import ModalStyle from './modal_style';
 
-// import RoomDetail from './room_detail';
-// <ReviewContainer currentRoom={room} currentUser={currentUser}/>
-//
 
 class CurrentRoomShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = props.room;
-    // debugger
-
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
@@ -35,15 +30,8 @@ class CurrentRoomShow extends React.Component {
   componentDidMount() {
     this.props.fetchRoom(this.props.roomId);
     this.setState({modalIsOpen: false});
-    // debugger
   }
 
-  //
-  // componentWillUnmount() {
-  //   ;
-  //   this.setState()
-  //   debugger
-  // }
 
   renderGuests(max_party_size) {
     if (max_party_size > 1) {
@@ -69,7 +57,6 @@ class CurrentRoomShow extends React.Component {
       return( <span className="big-details-items">{numOfBeds} Bed</span>);
     }
   }
-
 
   render() {
     const room = this.props.room;
