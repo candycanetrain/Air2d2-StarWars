@@ -9,13 +9,6 @@ export const fetchRooms = filters => dispatch => {
     .then(rooms => dispatch(receiveRooms(rooms)))
 )};
 
-// export const fetchRooms = () => {
-//   return dispatch => (
-//   RoomUtil.fetchRooms()
-//     .then(rooms => dispatch(receiveRooms(rooms)))
-//   );
-// };
-
 export const fetchRoom = (id) => dispatch => (
   RoomUtil.fetchRoom(id)
     .then(room => dispatch(receiveRoom(room)))

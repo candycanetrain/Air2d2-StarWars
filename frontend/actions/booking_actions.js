@@ -45,15 +45,6 @@ export const removeBooking = (booking) => ({
   booking
 });
 
-// export const createBooking = (booking) => ({
-//   type: CREATE_BOOKING,
-//   booking
-// }); 
-
-
-
-
-
 export const updateBooking = (booking) => ({
    type: UPDATE_BOOKING,
    booking
