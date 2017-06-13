@@ -1,6 +1,4 @@
 .show-page {
-  // display: flex;
-  // justify-content: space-between;
   width: 100%;
 }
 
@@ -35,8 +33,6 @@
 .big-details {
   display: flex;
   justify-content: space-between;
-
-
 }
 
 .big-details-col {
@@ -46,7 +42,6 @@
     flex-direction: column;
     text-align: center;
 }
-
 
 .big-details-col > img {
   height: 30px;
@@ -67,28 +62,18 @@
     display: table-row-group;
     vertical-align: inherit;
     border-color: inherit;
-
-
 }
 
 .about-table tr{
   display: block;
-
 }
-
-
-// .about-table td{
-//   display: block;
-// }
 
 .about-table th{
   left: 0;
   top: 0;
-  // width: 300px;
   margin-right: 30px;
   min-width: 80px;
   text-align: left;
-
 }
 
 
@@ -99,11 +84,11 @@
 .review {
   border-top: 1px solid $gray;
   border-bottom: 1px solid $gray;
-      padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
 }
 
 .review h3 {
@@ -112,10 +97,9 @@
 
 .booking-h3 {
   font-size: 20px;
-        padding-left: 20px;
-    padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
 
 .reviews-show li {
   display: flex;
@@ -134,9 +118,6 @@
 .review-header {
   font-size: 18px;
 }
-
-
-
 
 .review-body-textarea {
   height: 200px;
@@ -202,6 +183,7 @@
   border: 1px solid $light-gray;
   margin-right: 5px;
   width: 100px;
+  padding: 10px;
 }
 
 .booking-button {
@@ -210,6 +192,8 @@
   font-size: 14px;
   width: inherit;
   margin-bottom: 5px;
+  padding: 10px 0;
+  font-weight: bold;
 }
 
 .panel2 {
@@ -219,10 +203,7 @@
 
 #label-guests {
   display: block;
-}
-
-.top-part {
-
+  margin-bottom: 10px;
 }
 
 .no-reviews {
@@ -234,4 +215,8 @@
   color: red;
   padding: 11px 0;
   font-style: italic;
+}
+
+#panel-guests {
+  padding: 5px;
 }
