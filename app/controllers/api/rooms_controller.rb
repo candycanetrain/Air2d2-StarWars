@@ -12,30 +12,16 @@ class Api::RoomsController < ApplicationController
   end
 
   def index
-    #logic to filter rooms here. (where(parmas))
-    # debugger
     all_rooms = Room.all
 
     if number_to_display != 0
       @rooms = Room.all.limit(number_to_display)
-      # all_rooms.each do |room|
-      #   if (@rooms.length < number_to_display) && (number_to_display <= all_rooms.length)
-      #     @rooms.push(room)
-      #   end
-      # end
       @rooms
     elsif city != nil
-        #Room.where("city LIKE ?", "%#{city}%")
-
       @rooms = Room.all.where("lower(city) LIKE lower(?)", "%#{city}%")
-      # all_rooms.each do |room|
-      #   @rooms.push(room) if room.city == city
-      # end
-      # @rooms
     else
       @rooms = all_rooms
     end
-
   end
 
   def show
