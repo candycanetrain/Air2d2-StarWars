@@ -13,10 +13,7 @@ class Review extends React.Component {
       body: ""
     };
 
-    // this.handleChangeStart = this.handleChangeStart.bind(this);
-    // this.handleChangeEnd = this.handleChangeEnd.bind(this);
     this.handleReview = this.handleReview.bind(this);
-    // this.handlePartySize = this.handlePartySize.bind(this);
     this.updateBody = this.updateBody.bind(this);
     this.ratingChanged = this.ratingChanged.bind(this);
     this.renderReviews = this.renderReviews.bind(this);
