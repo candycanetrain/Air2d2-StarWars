@@ -5,7 +5,6 @@ const _defaultFilters = Object.freeze({
   city: nil;
   startDate: today.getDate();
   endDate: today.getDate();
-
 });
 
 const FiltersReducer = (state = _defaultFilters, actions) => {
@@ -18,7 +17,6 @@ const FiltersReducer = (state = _defaultFilters, actions) => {
       return merge({}, state, newFilter);
     default: 
       return state;
-
   }
 };
 

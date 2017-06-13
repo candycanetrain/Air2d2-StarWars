@@ -7,7 +7,6 @@ export const createReview = (review) => {
 }
 
 export const fetchReviews = (id) => {
-  // debugger
   return($.ajax({
     method: 'GET',
     url: 'api/reviews',

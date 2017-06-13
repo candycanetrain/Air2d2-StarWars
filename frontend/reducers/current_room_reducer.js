@@ -6,8 +6,6 @@ const currentRoomReducer = (state = {}, action) => {
   
   switch(action.type){
     case RECEIVE_ROOM:
-      // const newRoom = {[action.room.id]: action.room};
-      // return merge({}, state, newRoom);
       return action.room;
     default: 
       return state;
