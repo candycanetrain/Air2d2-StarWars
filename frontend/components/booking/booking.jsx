@@ -61,7 +61,7 @@ class Booking extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error,i) => (
-          <li key={`errors-${i} `}>
+          <li className="booking-errors" key={`errors-${i} `}>
             {error}
           </li>
         ))}
