@@ -20,18 +20,10 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :room
 
-  
-
   def end_date_is_after_start_date()
     return if start_date.blank? || end_date.blank?
     if end_date < start_date
       errors.add(:check_out_date, "cannot be before the check in date")
     end
   end
-
-  def overlaps?(other)
-    
-  end
-
-
 end

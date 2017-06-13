@@ -18,7 +18,6 @@ class Review < ApplicationRecord
 
   before_validation :ensure_review_belongs_to_user 
 
-
   def ensure_review_belongs_to_user()
     errors.add(:user, "never booked this room. Please book this room and then leave a review after your stay.") if user.bookings.none? {|booking| booking.room_id == room_id}
   end
