@@ -41,12 +41,11 @@ class Booking extends React.Component {
 
   handleBook(e) {
     e.preventDefault();
-    const currentUserId = this.props.currentUser.id;
     const currentRoomId = this.props.currentRoom.id;
     const startDate = this.state.startDate._d;
     const endDate = this.state.endDate._d;
     const party_size = this.state.party_size;
-    this.props.createBooking({user_id: currentUserId, room_id: currentRoomId, start_date: startDate, end_date: endDate, party_size: party_size })
+    this.props.createBooking({room_id: currentRoomId, start_date: startDate, end_date: endDate, party_size: party_size })
       .then(() => hashHistory.push("/bookings"));
   }
 
