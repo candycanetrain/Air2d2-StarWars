@@ -1,5 +1,5 @@
 import * as BookingUtil from '../util/booking_api_util';
-
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
 export const RECEIVE_BOOKING = "RECEIVE_BOOKING";
 export const RECEIVE_BOOKINGS = "RECEIVE_BOOKINGS";
 export const CREATE_BOOKING = "CREATE_BOOKING";
@@ -53,5 +53,9 @@ export const updateBooking = (booking) => ({
 export const receiveBookingErrors = errors => ({
   type: RECEIVE_BOOKING_ERRORS,
   errors
+});
+
+export const clearErrors = () => ({
+  type: CLEAR_ERRORS
 });
 

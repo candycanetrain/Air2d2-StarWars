@@ -22,6 +22,9 @@ class Booking extends React.Component {
     this.handlePartySize = this.handlePartySize.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
 
   componentWillReceiveProps(newProps) {
     this.setState(newProps.room);
