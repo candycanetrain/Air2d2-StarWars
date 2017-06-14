@@ -17,8 +17,8 @@ const reviewReducer = (state = _initialState, action) => {
       newState.reviews.push(action.review);
       return newState;
     case RECEIVE_REVIEW_ERRORS:
-      const errors = action.errors;
-      return merge({}, _initialState, {errors: action.errors});
+      newState.errors = action.errors;
+      return newState;
     case CLEAR_REVIEW_ERRORS:
       newState.errors = [];
       return newState;
