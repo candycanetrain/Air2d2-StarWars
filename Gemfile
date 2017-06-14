@@ -43,7 +43,7 @@ group :development, :test do
   gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'byebug', platform: :mri
+  gem 'byebug', platform: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'spring'
