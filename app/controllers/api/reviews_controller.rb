@@ -2,15 +2,14 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.user = current_user
-    
-    if @review.save
-      render 'api/reviews/show'
-    elsif !current_user
+
+    if !current_user
       render( json: ["Please log in or sign up to leave a review."], status:401)
+    elsif @review.save
+      render 'api/reviews/show'
     else
       render json: @review.errors.full_messages, status:422
     end
-
   end
 
   def index

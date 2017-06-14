@@ -5,7 +5,6 @@ class Api::BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-
     if @booking.save
       render 'api/bookings/show'
     elsif !current_user
