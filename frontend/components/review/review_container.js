@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createReview, fetchReviews } from '../../actions/review_actions';
+import { createReview, fetchReviews, clearReviewErrors } from '../../actions/review_actions';
 import Review from './review';
 
 const mapStateToProps = (state, ownProps) => {
@@ -17,7 +17,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   createReview: booking => dispatch(createReview(booking)),
-  fetchReviews: id => dispatch(fetchReviews(id))
+  fetchReviews: id => dispatch(fetchReviews(id)),
+  clearReviewErrors: () => dispatch(clearReviewErrors())
 });
 
 export default connect(

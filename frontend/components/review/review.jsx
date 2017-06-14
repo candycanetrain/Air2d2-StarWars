@@ -30,6 +30,10 @@ class Review extends React.Component {
     this.props.fetchReviews({room_id: this.props.roomId})
   }
 
+  componentWillUnmount() {
+    this.props.clearReviewErrors();
+  }
+
   ratingChanged(newRating) {
     this.setState({
       rating: newRating
@@ -54,16 +58,15 @@ class Review extends React.Component {
   renderErrors() {
     if (this.props.errors) {
       return(
-      <ul className="errors-for-reviews">
-        {this.props.errors.map((error,i) => (
-          <li key={`errors-${i} `}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+        <ul className="errors-for-reviews">
+          {this.props.errors.map((error,i) => (
+            <li key={`errors-${i} `}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
     }
-
   }
 
   renderReviews(hasReviews) {
@@ -77,8 +80,6 @@ class Review extends React.Component {
               <div className="review-user">{review.user.name}: {review.rating} stars</div>
               <div className="review-body">{review.body}</div>
             </li>
-
-
           ))}
         </ul>
       )
@@ -91,9 +92,6 @@ class Review extends React.Component {
     }
   }
 
-
-
-
   render() {
     let hasReviews;
     if (this.props.reviews.length !== 0) {
@@ -101,7 +99,6 @@ class Review extends React.Component {
     } else {
       hasReviews = false;
     }
-
 
       return(
         <div className="review">
