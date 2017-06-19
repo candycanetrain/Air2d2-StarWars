@@ -18,6 +18,7 @@ class Nav extends React.Component {
     return(
       <hgroup className="nav-group">
         <h2 className="nav-name">Welcome, {currentUser.name}!</h2>
+        <Link className="nav-button" to={{pathname: '/bookings'}}>My Bookings</Link>
         <button className="nav-button" onClick={logout}>Log Out</button>
       </hgroup>
     );
